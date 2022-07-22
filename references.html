@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API References &mdash; pyqtribbon 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://pyqtribbon.haiiliin.com/references.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The Ribbon Bar" href="ribbon.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pyqtribbon
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ribbon.html">The Ribbon Bar</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-bar">Ribbon Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-title">Ribbon Title</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbontitlewidget">RibbonTitleWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonapplicationbutton">RibbonApplicationButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbontitlelabel">RibbonTitleLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbontabbar">RibbonTabBar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-category">Ribbon Category</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribboncategory">RibbonCategory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#categorystyle">CategoryStyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonnormalcategory">RibbonNormalCategory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribboncontextcategory">RibbonContextCategory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribboncategorylayoutbutton">RibbonCategoryLayoutButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribboncategoryscrollarea">RibbonCategoryScrollArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribboncategoryscrollareacontents">RibbonCategoryScrollAreaContents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribboncategorylayoutwidget">RibbonCategoryLayoutWidget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-panel">Ribbon Panel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonpanel">RibbonPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spacefindmode">SpaceFindMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gridlayoutmanager">GridLayoutManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonpanelitemwidget">RibbonPanelItemWidget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-gallery">Ribbon Gallery</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbongallery">RibbonGallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbongallerylistwidget">RibbonGalleryListWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbongallerybutton">RibbonGalleryButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbongallerypopuplistwidget">RibbonGalleryPopupListWidget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-tool-button">Ribbon Tool Button</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbontoolbutton">RibbonToolButton</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-separator">Ribbon Separator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonseparator">RibbonSeparator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonhorizontalseparator">RibbonHorizontalSeparator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonverticalseparator">RibbonVerticalSeparator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyqtribbon</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API References</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/references.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-references">
+<h1>API References<a class="headerlink" href="#api-references" title="Permalink to this heading"></a></h1>
+<section id="ribbon-bar">
+<h2>Ribbon Bar<a class="headerlink" href="#ribbon-bar" title="Permalink to this heading"></a></h2>
+</section>
+<section id="ribbon-title">
+<h2>Ribbon Title<a class="headerlink" href="#ribbon-title" title="Permalink to this heading"></a></h2>
+<section id="ribbontitlewidget">
+<h3>RibbonTitleWidget<a class="headerlink" href="#ribbontitlewidget" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbonapplicationbutton">
+<h3>RibbonApplicationButton<a class="headerlink" href="#ribbonapplicationbutton" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbontitlelabel">
+<h3>RibbonTitleLabel<a class="headerlink" href="#ribbontitlelabel" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbontabbar">
+<h3>RibbonTabBar<a class="headerlink" href="#ribbontabbar" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="ribbon-category">
+<h2>Ribbon Category<a class="headerlink" href="#ribbon-category" title="Permalink to this heading"></a></h2>
+<section id="ribboncategory">
+<h3>RibbonCategory<a class="headerlink" href="#ribboncategory" title="Permalink to this heading"></a></h3>
+</section>
+<section id="categorystyle">
+<h3>CategoryStyle<a class="headerlink" href="#categorystyle" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbonnormalcategory">
+<h3>RibbonNormalCategory<a class="headerlink" href="#ribbonnormalcategory" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribboncontextcategory">
+<h3>RibbonContextCategory<a class="headerlink" href="#ribboncontextcategory" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribboncategorylayoutbutton">
+<h3>RibbonCategoryLayoutButton<a class="headerlink" href="#ribboncategorylayoutbutton" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribboncategoryscrollarea">
+<h3>RibbonCategoryScrollArea<a class="headerlink" href="#ribboncategoryscrollarea" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribboncategoryscrollareacontents">
+<h3>RibbonCategoryScrollAreaContents<a class="headerlink" href="#ribboncategoryscrollareacontents" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribboncategorylayoutwidget">
+<h3>RibbonCategoryLayoutWidget<a class="headerlink" href="#ribboncategorylayoutwidget" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="ribbon-panel">
+<h2>Ribbon Panel<a class="headerlink" href="#ribbon-panel" title="Permalink to this heading"></a></h2>
+<section id="ribbonpanel">
+<h3>RibbonPanel<a class="headerlink" href="#ribbonpanel" title="Permalink to this heading"></a></h3>
+</section>
+<section id="spacefindmode">
+<h3>SpaceFindMode<a class="headerlink" href="#spacefindmode" title="Permalink to this heading"></a></h3>
+</section>
+<section id="gridlayoutmanager">
+<h3>GridLayoutManager<a class="headerlink" href="#gridlayoutmanager" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbonpanelitemwidget">
+<h3>RibbonPanelItemWidget<a class="headerlink" href="#ribbonpanelitemwidget" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="ribbon-gallery">
+<h2>Ribbon Gallery<a class="headerlink" href="#ribbon-gallery" title="Permalink to this heading"></a></h2>
+<section id="ribbongallery">
+<h3>RibbonGallery<a class="headerlink" href="#ribbongallery" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbongallerylistwidget">
+<h3>RibbonGalleryListWidget<a class="headerlink" href="#ribbongallerylistwidget" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbongallerybutton">
+<h3>RibbonGalleryButton<a class="headerlink" href="#ribbongallerybutton" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbongallerypopuplistwidget">
+<h3>RibbonGalleryPopupListWidget<a class="headerlink" href="#ribbongallerypopuplistwidget" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="ribbon-tool-button">
+<h2>Ribbon Tool Button<a class="headerlink" href="#ribbon-tool-button" title="Permalink to this heading"></a></h2>
+<section id="ribbontoolbutton">
+<h3>RibbonToolButton<a class="headerlink" href="#ribbontoolbutton" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="ribbon-separator">
+<h2>Ribbon Separator<a class="headerlink" href="#ribbon-separator" title="Permalink to this heading"></a></h2>
+<section id="ribbonseparator">
+<h3>RibbonSeparator<a class="headerlink" href="#ribbonseparator" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbonhorizontalseparator">
+<h3>RibbonHorizontalSeparator<a class="headerlink" href="#ribbonhorizontalseparator" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbonverticalseparator">
+<h3>RibbonVerticalSeparator<a class="headerlink" href="#ribbonverticalseparator" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ribbon.html" class="btn btn-neutral float-left" title="The Ribbon Bar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
