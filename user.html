@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Manual &mdash; pyqtribbon 0.1.7 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API References" href="references.html" />
+    <link rel="prev" title="The Ribbon Bar" href="ribbon.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pyqtribbon
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ribbon.html">The Ribbon Bar</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#instantiating-a-ribbonbar">Instantiating a RibbonBar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-ribbonbar">Using the RibbonBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-ribbonmainwindow">Using the RibbonMainWindow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#customize-ribbon-bar">Customize Ribbon Bar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-setups">General Setups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-application-button">Setup Application Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-title">Setup Title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-category-tab-bar">Setup Category Tab Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-quick-access-bar">Setup Quick Access Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-right-tool-bar">Setup Right Tool Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-categories">Manage Categories</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#customize-categories">Customize Categories</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-styles">Setup Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manage-panels">Manage Panels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#customize-panels">Customize Panels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-title-label">Setup Title Label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-panel-option-button">Setup Panel Option Button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-widgets-to-panels">Add Widgets to Panels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">API References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyqtribbon</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>User Manual</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/user.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="user-manual">
+<h1>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline"></a></h1>
+<section id="instantiating-a-ribbonbar">
+<h2>Instantiating a RibbonBar<a class="headerlink" href="#instantiating-a-ribbonbar" title="Permalink to this headline"></a></h2>
+<p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar" title="ribbon.ribbonbar.RibbonBar"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonBar</span></code></a> is the main class for creating a ribbon bar.</p>
+<p>To begin with, you have to initialize your PyQt application.</p>
+<section id="using-the-ribbonbar">
+<h3>Using the RibbonBar<a class="headerlink" href="#using-the-ribbonbar" title="Permalink to this headline"></a></h3>
+<p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar" title="ribbon.ribbonbar.RibbonBar"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonBar</span></code></a> is  a class that implements a ribbon bar, you can use it to create a ribbon bar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span>
+
+<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">ribbon.utils</span> <span class="kn">import</span> <span class="n">data_file_path</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFont</span><span class="p">(</span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    
+    <span class="c1"># Central widget</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">centralWidget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">centralWidget</span><span class="p">)</span>
+    <span class="n">layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">centralWidget</span><span class="p">)</span>
+    
+    <span class="c1"># Ribbon bar</span>
+    <span class="n">ribbonbar</span> <span class="o">=</span> <span class="n">RibbonBar</span><span class="p">()</span>
+    <span class="n">category</span> <span class="o">=</span> <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addCategory</span><span class="p">(</span><span class="s2">&quot;Category 1&quot;</span><span class="p">)</span>
+    <span class="n">panel</span> <span class="o">=</span> <span class="n">category</span><span class="o">.</span><span class="n">addPanel</span><span class="p">(</span><span class="s2">&quot;Panel 1&quot;</span><span class="p">)</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addLargeButton</span><span class="p">(</span><span class="s2">&quot;A Large Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumButton</span><span class="p">(</span><span class="s2">&quot;A Medium Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumButton</span><span class="p">(</span><span class="s2">&quot;A Medium Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;A Small Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;A Small Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;A Small Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    
+    <span class="c1"># Display a label in the main window</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Ribbon Test Window&quot;</span><span class="p">)</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Ribbon Test Window&quot;</span><span class="p">)</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFont</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignCenter</span><span class="p">)</span>
+    
+    <span class="c1"># Add the ribbon bar and label to the layout</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">ribbonbar</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="c1"># Show the window</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1800</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+    
+</pre></div>
+</div>
+<p>It would be rendered as follows:</p>
+<a class="reference internal image-reference" href="_images/example.png"><img alt="_images/example.png" class="align-center" src="_images/example.png" style="width: 100%;" /></a>
+</section>
+<section id="using-the-ribbonmainwindow">
+<h3>Using the RibbonMainWindow<a class="headerlink" href="#using-the-ribbonmainwindow" title="Permalink to this headline"></a></h3>
+<p>Alternatively, you can use the <a class="reference internal" href="references.html#ribbon.mainwindow.RibbonMainWindow" title="ribbon.mainwindow.RibbonMainWindow"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonMainWindow</span></code></a> which is a QMainWindow that has a ribbon bar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span>
+
+<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonMainWindow</span>
+<span class="kn">from</span> <span class="nn">ribbon.utils</span> <span class="kn">import</span> <span class="n">data_file_path</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFont</span><span class="p">(</span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    
+    <span class="c1"># Main window</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">RibbonMainWindow</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    
+    <span class="c1"># Ribbon bar</span>
+    <span class="n">ribbonbar</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">ribbonBar</span><span class="p">()</span>
+    <span class="n">category</span> <span class="o">=</span> <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addCategory</span><span class="p">(</span><span class="s2">&quot;Category 1&quot;</span><span class="p">)</span>
+    <span class="n">panel</span> <span class="o">=</span> <span class="n">category</span><span class="o">.</span><span class="n">addPanel</span><span class="p">(</span><span class="s2">&quot;Panel 1&quot;</span><span class="p">)</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addLargeButton</span><span class="p">(</span><span class="s2">&quot;A Large Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumButton</span><span class="p">(</span><span class="s2">&quot;A Medium Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumButton</span><span class="p">(</span><span class="s2">&quot;A Medium Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;A Small Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;A Small Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;A Small Button&quot;</span><span class="p">,</span> <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">data_file_path</span><span class="p">(</span><span class="s2">&quot;icons/python.png&quot;</span><span class="p">)))</span>
+    
+    <span class="c1"># Display a label in the main window</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Ribbon Test Window&quot;</span><span class="p">)</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QFont</span><span class="p">(</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignCenter</span><span class="p">)</span>
+    
+    <span class="c1"># Add the ribbon bar and label to the layout</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">layout</span><span class="p">()</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="c1"># Show the window</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1800</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+    
+</pre></div>
+</div>
+</section>
+</section>
+<section id="customize-ribbon-bar">
+<h2>Customize Ribbon Bar<a class="headerlink" href="#customize-ribbon-bar" title="Permalink to this headline"></a></h2>
+<section id="general-setups">
+<h3>General Setups<a class="headerlink" href="#general-setups" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRibbonStyle" title="ribbon.ribbonbar.RibbonBar.setRibbonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRibbonStyle</span></code></a>(style)</p></td>
+<td><p>Set the style of the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.ribbonHeight" title="ribbon.ribbonbar.RibbonBar.ribbonHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.ribbonHeight</span></code></a>()</p></td>
+<td><p>Get the total height of the ribbon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRibbonHeight" title="ribbon.ribbonbar.RibbonBar.setRibbonHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRibbonHeight</span></code></a>(height)</p></td>
+<td><p>Set the total height of the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.showRibbon" title="ribbon.ribbonbar.RibbonBar.showRibbon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.showRibbon</span></code></a>()</p></td>
+<td><p>Show the ribbon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.hideRibbon" title="ribbon.ribbonbar.RibbonBar.hideRibbon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.hideRibbon</span></code></a>()</p></td>
+<td><p>Hide the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.ribbonVisible" title="ribbon.ribbonbar.RibbonBar.ribbonVisible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.ribbonVisible</span></code></a>()</p></td>
+<td><p>Get the visibility of the ribbon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRibbonVisible" title="ribbon.ribbonbar.RibbonBar.setRibbonVisible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRibbonVisible</span></code></a>(visible)</p></td>
+<td><p>Set the visibility of the ribbon.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setup-application-button">
+<h3>Setup Application Button<a class="headerlink" href="#setup-application-button" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.applicationOptionButton" title="ribbon.ribbonbar.RibbonBar.applicationOptionButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.applicationOptionButton</span></code></a>()</p></td>
+<td><p>Return the application button.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setApplicationIcon" title="ribbon.ribbonbar.RibbonBar.setApplicationIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setApplicationIcon</span></code></a>(icon)</p></td>
+<td><p>Set the application icon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addApplicationOptionAction" title="ribbon.ribbonbar.RibbonBar.addApplicationOptionAction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addApplicationOptionAction</span></code></a>(action)</p></td>
+<td><p>Add a display option to the ribbon.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setup-title">
+<h3>Setup Title<a class="headerlink" href="#setup-title" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.title" title="ribbon.ribbonbar.RibbonBar.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.title</span></code></a>()</p></td>
+<td><p>Return the title of the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setTitle" title="ribbon.ribbonbar.RibbonBar.setTitle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setTitle</span></code></a>(title)</p></td>
+<td><p>Set the title of the ribbon.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setup-category-tab-bar">
+<h3>Setup Category Tab Bar<a class="headerlink" href="#setup-category-tab-bar" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.tabBar" title="ribbon.ribbonbar.RibbonBar.tabBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.tabBar</span></code></a>()</p></td>
+<td><p>Return the tab bar of the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.tabBarHeight" title="ribbon.ribbonbar.RibbonBar.tabBarHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.tabBarHeight</span></code></a>()</p></td>
+<td><p>Get the height of the tab bar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setTabBarHeight" title="ribbon.ribbonbar.RibbonBar.setTabBarHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setTabBarHeight</span></code></a>([height])</p></td>
+<td><p>Set the height of the tab bar.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setup-quick-access-bar">
+<h3>Setup Quick Access Bar<a class="headerlink" href="#setup-quick-access-bar" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.quickAccessToolBar" title="ribbon.ribbonbar.RibbonBar.quickAccessToolBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.quickAccessToolBar</span></code></a>()</p></td>
+<td><p>Return the quick access toolbar of the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addQuickAccessButton" title="ribbon.ribbonbar.RibbonBar.addQuickAccessButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addQuickAccessButton</span></code></a>(button)</p></td>
+<td><p>Add a button to the quick access bar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setQuickAccessButtonHeight" title="ribbon.ribbonbar.RibbonBar.setQuickAccessButtonHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setQuickAccessButtonHeight</span></code></a>([height])</p></td>
+<td><p>Set the height of the quick access buttons.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setup-right-tool-bar">
+<h3>Setup Right Tool Bar<a class="headerlink" href="#setup-right-tool-bar" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.rightToolBar" title="ribbon.ribbonbar.RibbonBar.rightToolBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.rightToolBar</span></code></a>()</p></td>
+<td><p>Return the right toolbar of the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addRightToolButton" title="ribbon.ribbonbar.RibbonBar.addRightToolButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addRightToolButton</span></code></a>(button)</p></td>
+<td><p>Add a widget to the right button bar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRightToolBarHeight" title="ribbon.ribbonbar.RibbonBar.setRightToolBarHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRightToolBarHeight</span></code></a>([height])</p></td>
+<td><p>Set the height of the right buttons.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setHelpButtonIcon" title="ribbon.ribbonbar.RibbonBar.setHelpButtonIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setHelpButtonIcon</span></code></a>(icon)</p></td>
+<td><p>Set the icon of the help button.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.removeHelpButton" title="ribbon.ribbonbar.RibbonBar.removeHelpButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.removeHelpButton</span></code></a>()</p></td>
+<td><p>Remove the help button from the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.collapseRibbonButton" title="ribbon.ribbonbar.RibbonBar.collapseRibbonButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.collapseRibbonButton</span></code></a>()</p></td>
+<td><p>Return the collapse ribbon button.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setCollapseButtonIcon" title="ribbon.ribbonbar.RibbonBar.setCollapseButtonIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setCollapseButtonIcon</span></code></a>(icon)</p></td>
+<td><p>Set the icon of the min button.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.removeCollapseButton" title="ribbon.ribbonbar.RibbonBar.removeCollapseButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.removeCollapseButton</span></code></a>()</p></td>
+<td><p>Remove the min button from the ribbon.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="manage-categories">
+<h3>Manage Categories<a class="headerlink" href="#manage-categories" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.categories" title="ribbon.ribbonbar.RibbonBar.categories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.categories</span></code></a>()</p></td>
+<td><p>Return a list of categories of the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addCategory" title="ribbon.ribbonbar.RibbonBar.addCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addCategory</span></code></a>(title[, style, color])</p></td>
+<td><p>Add a new category to the ribbon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addNormalCategory" title="ribbon.ribbonbar.RibbonBar.addNormalCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addNormalCategory</span></code></a>(title)</p></td>
+<td><p>Add a new category to the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addContextCategory" title="ribbon.ribbonbar.RibbonBar.addContextCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addContextCategory</span></code></a>(title[, color])</p></td>
+<td><p>Add a new context category to the ribbon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.showContextCategory" title="ribbon.ribbonbar.RibbonBar.showContextCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.showContextCategory</span></code></a>(category)</p></td>
+<td><p>Show the given category, if it is not a context category, nothing happens.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.hideContextCategory" title="ribbon.ribbonbar.RibbonBar.hideContextCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.hideContextCategory</span></code></a>(category)</p></td>
+<td><p>Hide the given category, if it is not a context category, nothing happens.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.removeCategory" title="ribbon.ribbonbar.RibbonBar.removeCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.removeCategory</span></code></a>(category)</p></td>
+<td><p>Remove a category from the ribbon.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setCurrentCategory" title="ribbon.ribbonbar.RibbonBar.setCurrentCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setCurrentCategory</span></code></a>(category)</p></td>
+<td><p>Set the current category.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="customize-categories">
+<h2>Customize Categories<a class="headerlink" href="#customize-categories" title="Permalink to this headline"></a></h2>
+<section id="setup-styles">
+<h3>Setup Styles<a class="headerlink" href="#setup-styles" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.categoryStyle" title="ribbon.category.RibbonCategory.categoryStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.categoryStyle</span></code></a>()</p></td>
+<td><p>Return the button style of the category.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.setCategoryStyle" title="ribbon.category.RibbonCategory.setCategoryStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.setCategoryStyle</span></code></a>(style)</p></td>
+<td><p>Set the button style of the category.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="manage-panels">
+<h3>Manage Panels<a class="headerlink" href="#manage-panels" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.addPanel" title="ribbon.category.RibbonCategory.addPanel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.addPanel</span></code></a>(title)</p></td>
+<td><p>Add a new panel to the category.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.removePanel" title="ribbon.category.RibbonCategory.removePanel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.removePanel</span></code></a>(title)</p></td>
+<td><p>Remove a panel from the category.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.panel" title="ribbon.category.RibbonCategory.panel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.panel</span></code></a>(title)</p></td>
+<td><p>Return a panel from the category.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.takePanel" title="ribbon.category.RibbonCategory.takePanel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.takePanel</span></code></a>(title)</p></td>
+<td><p>Remove and return a panel from the category.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="customize-panels">
+<h2>Customize Panels<a class="headerlink" href="#customize-panels" title="Permalink to this headline"></a></h2>
+<section id="setup-title-label">
+<h3>Setup Title Label<a class="headerlink" href="#setup-title-label" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.titleText" title="ribbon.panel.RibbonPanel.titleText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.titleText</span></code></a>()</p></td>
+<td><p>Get the title text of the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.setTitleText" title="ribbon.panel.RibbonPanel.setTitleText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.setTitleText</span></code></a>(text)</p></td>
+<td><p>Set the title text of the panel.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setup-panel-option-button">
+<h3>Setup Panel Option Button<a class="headerlink" href="#setup-panel-option-button" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.panelOptionButton" title="ribbon.panel.RibbonPanel.panelOptionButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.panelOptionButton</span></code></a>()</p></td>
+<td><p>Return the panel option button.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.setPanelOptionToolTip" title="ribbon.panel.RibbonPanel.setPanelOptionToolTip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.setPanelOptionToolTip</span></code></a>(text)</p></td>
+<td><p>Set the tooltip of the panel option button.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="add-widgets-to-panels">
+<h3>Add Widgets to Panels<a class="headerlink" href="#add-widgets-to-panels" title="Permalink to this headline"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addWidget" title="ribbon.panel.RibbonPanel.addWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addWidget</span></code></a>(widget[, rowSpan, ...])</p></td>
+<td><p>Add a widget to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.removeWidget" title="ribbon.panel.RibbonPanel.removeWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.removeWidget</span></code></a>(widget)</p></td>
+<td><p>Remove a widget from the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.widget" title="ribbon.panel.RibbonPanel.widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.widget</span></code></a>(index)</p></td>
+<td><p>Get the widget at the given index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSmallWidget" title="ribbon.panel.RibbonPanel.addSmallWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSmallWidget</span></code></a>(widget[, mode, ...])</p></td>
+<td><p>Add a small widget to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addMediumWidget" title="ribbon.panel.RibbonPanel.addMediumWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addMediumWidget</span></code></a>(widget[, mode, ...])</p></td>
+<td><p>Add a medium widget to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLargeWidget" title="ribbon.panel.RibbonPanel.addLargeWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLargeWidget</span></code></a>(widget[, mode, ...])</p></td>
+<td><p>Add a large widget to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addButton" title="ribbon.panel.RibbonPanel.addButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addButton</span></code></a>([text, icon, style, ...])</p></td>
+<td><p>Add a button to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSmallButton" title="ribbon.panel.RibbonPanel.addSmallButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSmallButton</span></code></a>([text, icon, ...])</p></td>
+<td><p>Add a small button to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addMediumButton" title="ribbon.panel.RibbonPanel.addMediumButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addMediumButton</span></code></a>([text, icon, ...])</p></td>
+<td><p>Add a medium button to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLargeButton" title="ribbon.panel.RibbonPanel.addLargeButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLargeButton</span></code></a>([text, icon, ...])</p></td>
+<td><p>Add a large button to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addToggleButton" title="ribbon.panel.RibbonPanel.addToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addToggleButton</span></code></a>([text, icon, ...])</p></td>
+<td><p>Add a toggle button to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSmallToggleButton" title="ribbon.panel.RibbonPanel.addSmallToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSmallToggleButton</span></code></a>([text, ...])</p></td>
+<td><p>Add a small toggle button to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addMediumToggleButton" title="ribbon.panel.RibbonPanel.addMediumToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addMediumToggleButton</span></code></a>([text, ...])</p></td>
+<td><p>Add a medium toggle button to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLargeToggleButton" title="ribbon.panel.RibbonPanel.addLargeToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLargeToggleButton</span></code></a>([text, ...])</p></td>
+<td><p>Add a large toggle button to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addComboBox" title="ribbon.panel.RibbonPanel.addComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addComboBox</span></code></a>(items[, rowSpan, ...])</p></td>
+<td><p>Add a combo box to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addFontComboBox" title="ribbon.panel.RibbonPanel.addFontComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addFontComboBox</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a font combo box to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLineEdit" title="ribbon.panel.RibbonPanel.addLineEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLineEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
+<td><p>Add a line edit to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTextEdit" title="ribbon.panel.RibbonPanel.addTextEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTextEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
+<td><p>Add a text edit to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addPlainTextEdit" title="ribbon.panel.RibbonPanel.addPlainTextEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addPlainTextEdit</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a plain text edit to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLabel" title="ribbon.panel.RibbonPanel.addLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLabel</span></code></a>(text[, rowSpan, ...])</p></td>
+<td><p>Add a label to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addProgressBar" title="ribbon.panel.RibbonPanel.addProgressBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addProgressBar</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a progress bar to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSlider" title="ribbon.panel.RibbonPanel.addSlider"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSlider</span></code></a>([rowSpan, colSpan, ...])</p></td>
+<td><p>Add a slider to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSpinBox" title="ribbon.panel.RibbonPanel.addSpinBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSpinBox</span></code></a>([rowSpan, colSpan, ...])</p></td>
+<td><p>Add a spin box to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addDoubleSpinBox" title="ribbon.panel.RibbonPanel.addDoubleSpinBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addDoubleSpinBox</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a double spin box to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addDateEdit" title="ribbon.panel.RibbonPanel.addDateEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addDateEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
+<td><p>Add a date edit to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTimeEdit" title="ribbon.panel.RibbonPanel.addTimeEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTimeEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
+<td><p>Add a time edit to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addDateTimeEdit" title="ribbon.panel.RibbonPanel.addDateTimeEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addDateTimeEdit</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a date time edit to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTableWidget" title="ribbon.panel.RibbonPanel.addTableWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTableWidget</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a table widget to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTreeWidget" title="ribbon.panel.RibbonPanel.addTreeWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTreeWidget</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a tree widget to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addListWidget" title="ribbon.panel.RibbonPanel.addListWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addListWidget</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a list widget to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addCalendarWidget" title="ribbon.panel.RibbonPanel.addCalendarWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addCalendarWidget</span></code></a>([rowSpan, ...])</p></td>
+<td><p>Add a calendar widget to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSeparator" title="ribbon.panel.RibbonPanel.addSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSeparator</span></code></a>([orientation, ...])</p></td>
+<td><p>Add a separator to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addHorizontalSeparator" title="ribbon.panel.RibbonPanel.addHorizontalSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addHorizontalSeparator</span></code></a>([...])</p></td>
+<td><p>Add a horizontal separator to the panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addVerticalSeparator" title="ribbon.panel.RibbonPanel.addVerticalSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addVerticalSeparator</span></code></a>([...])</p></td>
+<td><p>Add a vertical separator to the panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addGallery" title="ribbon.panel.RibbonPanel.addGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addGallery</span></code></a>([minimumWidth, ...])</p></td>
+<td><p>Add a gallery to the panel.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ribbon.html" class="btn btn-neutral float-left" title="The Ribbon Bar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="references.html" class="btn btn-neutral float-right" title="API References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
