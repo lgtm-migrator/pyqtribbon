@@ -43,10 +43,14 @@
 <li class="toctree-l1"><a class="reference internal" href="ribbon.html">The Ribbon Bar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#ribbon-main-window">Ribbon Main Window</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ribbonmainwindow">RibbonMainWindow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ribbon-bar">Ribbon Bar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ribbonbar">RibbonBar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-main-window">Ribbon Main Window</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonmainwindow">RibbonMainWindow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-bar">Ribbon Bar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonbar">RibbonBar</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#ribbon-title">Ribbon Title</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ribbonapplicationbutton">RibbonApplicationButton</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ribbontabbar">RibbonTabBar</a></li>
@@ -122,13 +126,13 @@
 <h1>API References<a class="headerlink" href="#api-references" title="Permalink to this heading"></a></h1>
 <section id="ribbon-main-window">
 <h2>Ribbon Main Window<a class="headerlink" href="#ribbon-main-window" title="Permalink to this heading"></a></h2>
-</section>
 <section id="ribbonmainwindow">
-<h2>RibbonMainWindow<a class="headerlink" href="#ribbonmainwindow" title="Permalink to this heading"></a></h2>
+<h3>RibbonMainWindow<a class="headerlink" href="#ribbonmainwindow" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.mainwindow.RibbonMainWindow">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.mainwindow.</span></span><span class="sig-name descname"><span class="pre">RibbonMainWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/mainwindow.py#L6-L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.mainwindow.RibbonMainWindow" title="Permalink to this definition"></a></dt>
-<dd><p>Main window with ribbon bar.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QMainWindow</span></code></p>
+<p>Main window with ribbon bar.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -159,15 +163,16 @@
 </dd></dl>
 
 </section>
+</section>
 <section id="ribbon-bar">
 <h2>Ribbon Bar<a class="headerlink" href="#ribbon-bar" title="Permalink to this heading"></a></h2>
-</section>
 <section id="ribbonbar">
-<h2>RibbonBar<a class="headerlink" href="#ribbonbar" title="Permalink to this heading"></a></h2>
+<h3>RibbonBar<a class="headerlink" href="#ribbonbar" title="Permalink to this heading"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.ribbonbar.RibbonBar">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.ribbonbar.</span></span><span class="sig-name descname"><span class="pre">RibbonBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PyQtRibbon'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/ribbonbar.py#L17-L374"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.ribbonbar.RibbonBar" title="Permalink to this definition"></a></dt>
-<dd><p>The RibbonBar class is the top level widget that contains the ribbon.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>The RibbonBar class is the top level widget that contains the ribbon.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -696,6 +701,7 @@ will be used.</p></li>
 </dd></dl>
 
 </section>
+</section>
 <section id="ribbon-title">
 <h2>Ribbon Title<a class="headerlink" href="#ribbon-title" title="Permalink to this heading"></a></h2>
 <section id="ribbonapplicationbutton">
@@ -703,7 +709,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.titlewidget.RibbonApplicationButton">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.titlewidget.</span></span><span class="sig-name descname"><span class="pre">RibbonApplicationButton</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/titlewidget.py#L7-L9"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.titlewidget.RibbonApplicationButton" title="Permalink to this definition"></a></dt>
-<dd><p>Application button in the ribbon bar.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QToolButton</span></code></p>
+<p>Application button in the ribbon bar.</p>
 </dd></dl>
 
 </section>
@@ -712,7 +719,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.tabbar.RibbonTabBar">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.tabbar.</span></span><span class="sig-name descname"><span class="pre">RibbonTabBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/tabbar.py#L4-L81"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.tabbar.RibbonTabBar" title="Permalink to this definition"></a></dt>
-<dd><p>The TabBar for the title widget.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QTabBar</span></code></p>
+<p>The TabBar for the title widget.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -790,7 +798,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.titlewidget.RibbonTitleLabel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.titlewidget.</span></span><span class="sig-name descname"><span class="pre">RibbonTitleLabel</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/titlewidget.py#L12-L14"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.titlewidget.RibbonTitleLabel" title="Permalink to this definition"></a></dt>
-<dd><p>Title label in the ribbon bar.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QLabel</span></code></p>
+<p>Title label in the ribbon bar.</p>
 </dd></dl>
 
 </section>
@@ -799,7 +808,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.titlewidget.RibbonTitleWidget">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.titlewidget.</span></span><span class="sig-name descname"><span class="pre">RibbonTitleWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PyQtRibbon'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/titlewidget.py#L17-L259"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.titlewidget.RibbonTitleWidget" title="Permalink to this definition"></a></dt>
-<dd><p>The title widget of the ribbon.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>The title widget of the ribbon.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1119,7 +1129,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.category.RibbonCategory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.category.</span></span><span class="sig-name descname"><span class="pre">RibbonCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ribbon.category.RibbonCategoryStyle" title="ribbon.category.RibbonCategoryStyle"><span class="pre">RibbonCategoryStyle</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">RibbonCategoryStyle.Normal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">QColor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/category.py#L29-L127"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.category.RibbonCategory" title="Permalink to this definition"></a></dt>
-<dd><p>The RibbonCategory is the logical grouping that represents the contents of a ribbon tab.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>The RibbonCategory is the logical grouping that represents the contents of a ribbon tab.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1256,7 +1267,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.category.RibbonNormalCategory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.category.</span></span><span class="sig-name descname"><span class="pre">RibbonNormalCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QWidget</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/category.py#L130-L146"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.category.RibbonNormalCategory" title="Permalink to this definition"></a></dt>
-<dd><p>A normal category.</p>
+<dd><p>Bases: <a class="reference internal" href="#ribbon.category.RibbonCategory" title="ribbon.category.RibbonCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonCategory</span></code></a></p>
+<p>A normal category.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1288,7 +1300,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.category.RibbonContextCategory">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.category.</span></span><span class="sig-name descname"><span class="pre">RibbonContextCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QColor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QWidget</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/category.py#L149-L206"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.category.RibbonContextCategory" title="Permalink to this definition"></a></dt>
-<dd><p>A context category.</p>
+<dd><p>Bases: <a class="reference internal" href="#ribbon.category.RibbonCategory" title="ribbon.category.RibbonCategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonCategory</span></code></a></p>
+<p>A context category.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1394,7 +1407,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.category.RibbonCategoryStyle">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.category.</span></span><span class="sig-name descname"><span class="pre">RibbonCategoryStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/category.py#L12-L15"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.category.RibbonCategoryStyle" title="Permalink to this definition"></a></dt>
-<dd><p>The button style of a category.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>The button style of a category.</p>
 </dd></dl>
 
 </section>
@@ -1403,7 +1417,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.categorylayoutwidget.RibbonCategoryScrollArea">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.categorylayoutwidget.</span></span><span class="sig-name descname"><span class="pre">RibbonCategoryScrollArea</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/categorylayoutwidget.py#L13-L15"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.categorylayoutwidget.RibbonCategoryScrollArea" title="Permalink to this definition"></a></dt>
-<dd><p>Scroll area for the gallery</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QScrollArea</span></code></p>
+<p>Scroll area for the gallery</p>
 </dd></dl>
 
 </section>
@@ -1412,7 +1427,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.categorylayoutwidget.RibbonCategoryScrollAreaContents">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.categorylayoutwidget.</span></span><span class="sig-name descname"><span class="pre">RibbonCategoryScrollAreaContents</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/categorylayoutwidget.py#L18-L20"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.categorylayoutwidget.RibbonCategoryScrollAreaContents" title="Permalink to this definition"></a></dt>
-<dd><p>Scroll area contents for the gallery</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>Scroll area contents for the gallery</p>
 </dd></dl>
 
 </section>
@@ -1421,7 +1437,8 @@ will be used.</p></li>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.categorylayoutwidget.RibbonCategoryLayoutButton">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.categorylayoutwidget.</span></span><span class="sig-name descname"><span class="pre">RibbonCategoryLayoutButton</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/categorylayoutwidget.py#L6-L10"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.categorylayoutwidget.RibbonCategoryLayoutButton" title="Permalink to this definition"></a></dt>
-<dd><p>Previous/Next buttons in the category when the 
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QToolButton</span></code></p>
+<p>Previous/Next buttons in the category when the 
 sizr is not enough for the widgets.</p>
 </dd></dl>
 
@@ -1431,7 +1448,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.categorylayoutwidget.RibbonCategoryLayoutWidget">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.categorylayoutwidget.</span></span><span class="sig-name descname"><span class="pre">RibbonCategoryLayoutWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/categorylayoutwidget.py#L23-L128"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.categorylayoutwidget.RibbonCategoryLayoutWidget" title="Permalink to this definition"></a></dt>
-<dd><p>The category layout widget’s category scroll area to arrange the widgets in the category.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>The category layout widget’s category scroll area to arrange the widgets in the category.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -1553,7 +1571,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.panel.RibbonPanel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.panel.</span></span><span class="sig-name descname"><span class="pre">RibbonPanel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxRows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/panel.py#L102-L1001"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.panel.RibbonPanel" title="Permalink to this definition"></a></dt>
-<dd><p>Panel in the ribbon category.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>Panel in the ribbon category.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2445,7 +2464,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.panel.RibbonPanelItemWidget">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.panel.</span></span><span class="sig-name descname"><span class="pre">RibbonPanelItemWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/panel.py#L73-L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.panel.RibbonPanelItemWidget" title="Permalink to this definition"></a></dt>
-<dd><p>Widget to display a panel item.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>Widget to display a panel item.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2477,7 +2497,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.panel.RibbonSpaceFindMode">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.panel.</span></span><span class="sig-name descname"><span class="pre">RibbonSpaceFindMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/panel.py#L18-L21"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.panel.RibbonSpaceFindMode" title="Permalink to this definition"></a></dt>
-<dd><p>Mode to find available space in a grid layout, ColumnWise or RowWise.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Mode to find available space in a grid layout, ColumnWise or RowWise.</p>
 </dd></dl>
 
 </section>
@@ -2486,7 +2507,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.panel.RibbonGridLayoutManager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.panel.</span></span><span class="sig-name descname"><span class="pre">RibbonGridLayoutManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/panel.py#L24-L70"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.panel.RibbonGridLayoutManager" title="Permalink to this definition"></a></dt>
-<dd><p>Grid Layout Manager.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Grid Layout Manager.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2528,7 +2550,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimumWidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">popupHideOnClick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L45-L256"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery" title="Permalink to this definition"></a></dt>
-<dd><p>A widget that displays a gallery of buttons.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>A widget that displays a gallery of buttons.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2664,7 +2687,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryListWidget">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L7-L29"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget" title="Permalink to this definition"></a></dt>
-<dd><p>Gallery list widget.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QListWidget</span></code></p>
+<p>Gallery list widget.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2709,7 +2733,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryButton">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryButton</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L32-L34"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryButton" title="Permalink to this definition"></a></dt>
-<dd><p>Gallery button.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QToolButton</span></code></p>
+<p>Gallery button.</p>
 </dd></dl>
 
 </section>
@@ -2718,7 +2743,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryPopupListWidget">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryPopupListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L37-L42"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryPopupListWidget" title="Permalink to this definition"></a></dt>
-<dd><p>Gallery popup list widget.</p>
+<dd><p>Bases: <a class="reference internal" href="#ribbon.gallery.RibbonGalleryListWidget" title="ribbon.gallery.RibbonGalleryListWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonGalleryListWidget</span></code></a></p>
+<p>Gallery popup list widget.</p>
 </dd></dl>
 
 </section>
@@ -2730,7 +2756,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.toolbutton.RibbonToolButton">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonToolButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L14-L85"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton" title="Permalink to this definition"></a></dt>
-<dd><p>Tool button that is showed in the ribbon.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QToolButton</span></code></p>
+<p>Tool button that is showed in the ribbon.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2804,7 +2831,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.toolbutton.RibbonButtonStyle">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonButtonStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L7-L11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonButtonStyle" title="Permalink to this definition"></a></dt>
-<dd><p>Button style, Small, Medium, or Large.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Button style, Small, Medium, or Large.</p>
 </dd></dl>
 
 </section>
@@ -2816,7 +2844,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.separator.RibbonSeparator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.separator.</span></span><span class="sig-name descname"><span class="pre">RibbonSeparator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/separator.py#L4-L54"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.separator.RibbonSeparator" title="Permalink to this definition"></a></dt>
-<dd><p>The RibbonSeparator is a separator that can be used to separate widgets in a ribbon.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">QFrame</span></code></p>
+<p>The RibbonSeparator is a separator that can be used to separate widgets in a ribbon.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
 <colgroup>
@@ -2861,7 +2890,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.separator.RibbonHorizontalSeparator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.separator.</span></span><span class="sig-name descname"><span class="pre">RibbonHorizontalSeparator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/separator.py#L57-L66"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.separator.RibbonHorizontalSeparator" title="Permalink to this definition"></a></dt>
-<dd><p>Horizontal separator.</p>
+<dd><p>Bases: <a class="reference internal" href="#ribbon.separator.RibbonSeparator" title="ribbon.separator.RibbonSeparator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonSeparator</span></code></a></p>
+<p>Horizontal separator.</p>
 </dd></dl>
 
 </section>
@@ -2870,7 +2900,8 @@ sizr is not enough for the widgets.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.separator.RibbonVerticalSeparator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.separator.</span></span><span class="sig-name descname"><span class="pre">RibbonVerticalSeparator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/separator.py#L69-L78"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.separator.RibbonVerticalSeparator" title="Permalink to this definition"></a></dt>
-<dd><p>Vertical separator.</p>
+<dd><p>Bases: <a class="reference internal" href="#ribbon.separator.RibbonSeparator" title="ribbon.separator.RibbonSeparator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonSeparator</span></code></a></p>
+<p>Vertical separator.</p>
 </dd></dl>
 
 </section>
