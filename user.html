@@ -97,10 +97,18 @@
 <h1>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline"></a></h1>
 <section id="instantiating-a-ribbon-bar">
 <h2>Instantiating a Ribbon Bar<a class="headerlink" href="#instantiating-a-ribbon-bar" title="Permalink to this headline"></a></h2>
-<p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar" title="ribbon.ribbonbar.RibbonBar"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonBar</span></code></a> is the main class for creating a ribbon bar.</p>
-<p>To begin with, you have to initialize your PyQt application.</p>
 <p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar" title="ribbon.ribbonbar.RibbonBar"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonBar</span></code></a> is inherited from <a class="reference external" href="https://doc.qt.io/qt-5/qmenubar.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMenuBar</span></code></a>,
 you can use the <cite>setMenuBar</cite> method of <a class="reference external" href="https://doc.qt.io/qt-5/qmainwindow.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMainWindow</span></code></a> to set the ribbon bar as the main menu bar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">()</span>
+<span class="n">ribbon</span> <span class="o">=</span> <span class="n">RibbonBar</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setMenuBar</span><span class="p">(</span><span class="n">ribbon</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>The following code snippet is a whole example.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">QVBoxLayout</span>
