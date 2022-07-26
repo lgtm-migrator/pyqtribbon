@@ -2894,7 +2894,7 @@ size is not enough for the widgets.</p>
 <h3>RibbonToolButton<a class="headerlink" href="#ribbontoolbutton" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.toolbutton.RibbonToolButton">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonToolButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L16-L62"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonToolButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L16-L69"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qtoolbutton.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QToolButton</span></code></a></p>
 <p>Tool button that is showed in the ribbon.</p>
 <p class="rubric">Methods</p>
@@ -2907,18 +2907,32 @@ size is not enough for the widgets.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton.addRibbonMenu" title="ribbon.toolbutton.RibbonToolButton.addRibbonMenu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addRibbonMenu</span></code></a>()</p></td>
 <td><p>Add a ribbon menu for the button.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton.setButtonStyle" title="ribbon.toolbutton.RibbonToolButton.setButtonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setButtonStyle</span></code></a>(style)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton.buttonStyle" title="ribbon.toolbutton.RibbonToolButton.buttonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">buttonStyle</span></code></a>()</p></td>
+<td><p>Get the button style of the button.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton.setButtonStyle" title="ribbon.toolbutton.RibbonToolButton.setButtonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setButtonStyle</span></code></a>(style)</p></td>
 <td><p>Set the button style of the button.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.toolbutton.RibbonToolButton.addRibbonMenu">
-<span class="sig-name descname"><span class="pre">addRibbonMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.menu.RibbonMenu" title="ribbon.menu.RibbonMenu"><span class="pre">RibbonMenu</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L55-L62"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton.addRibbonMenu" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addRibbonMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.menu.RibbonMenu" title="ribbon.menu.RibbonMenu"><span class="pre">RibbonMenu</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L62-L69"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton.addRibbonMenu" title="Permalink to this definition"></a></dt>
 <dd><p>Add a ribbon menu for the button.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The added ribbon menu.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.toolbutton.RibbonToolButton.buttonStyle">
+<span class="sig-name descname"><span class="pre">buttonStyle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.toolbutton.RibbonButtonStyle" title="ribbon.toolbutton.RibbonButtonStyle"><span class="pre">RibbonButtonStyle</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L55-L60"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton.buttonStyle" title="Permalink to this definition"></a></dt>
+<dd><p>Get the button style of the button.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The button style of the button.</p>
 </dd>
 </dl>
 </dd></dl>
