@@ -76,6 +76,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#ribbongallerylistwidget">RibbonGalleryListWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ribbongallerybutton">RibbonGalleryButton</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ribbongallerypopuplistwidget">RibbonGalleryPopupListWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonpopupwidget">RibbonPopupWidget</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#ribbon-tool-button">Ribbon Tool Button</a><ul>
@@ -91,6 +92,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#ribbon-menu">Ribbon Menu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ribbonmenu">RibbonMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonpermanentmenu">RibbonPermanentMenu</a></li>
 </ul>
 </li>
 </ul>
@@ -2686,7 +2688,7 @@ size is not enough for the widgets.</p>
 <h3>RibbonGallery<a class="headerlink" href="#ribbongallery" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimumWidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">popupHideOnClick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L47-L275"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minimumWidth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">popupHideOnClick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L53-L305"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qframe.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QFrame</span></code></a></p>
@@ -2703,6 +2705,12 @@ size is not enough for the widgets.</p>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#ribbon.gallery.RibbonGallery.addToggleButton" title="ribbon.gallery.RibbonGallery.addToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addToggleButton</span></code></a>([text, icon, slot, ...])</p></td>
 <td><p>Add a toggle button to the gallery</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.gallery.RibbonGallery.hidePopupWidget" title="ribbon.gallery.RibbonGallery.hidePopupWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hidePopupWidget</span></code></a>()</p></td>
+<td><p>Hide the popup window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.gallery.RibbonGallery.popupMenu" title="ribbon.gallery.RibbonGallery.popupMenu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popupMenu</span></code></a>()</p></td>
+<td><p>Return the popup menu.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.gallery.RibbonGallery.popupWindowSize" title="ribbon.gallery.RibbonGallery.popupWindowSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popupWindowSize</span></code></a>()</p></td>
 <td><p>Return the size of the popup window</p></td>
@@ -2726,7 +2734,7 @@ size is not enough for the widgets.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.addButton">
-<span class="sig-name descname"><span class="pre">addButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://doc.qt.io/qt-5/qicon.html" title="(in Qt5 v5.15)"><span class="pre">QIcon</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shortcut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tooltip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statusTip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton" title="ribbon.toolbutton.RibbonToolButton"><span class="pre">RibbonToolButton</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L194-L253"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.addButton" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://doc.qt.io/qt-5/qicon.html" title="(in Qt5 v5.15)"><span class="pre">QIcon</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shortcut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tooltip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statusTip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton" title="ribbon.toolbutton.RibbonToolButton"><span class="pre">RibbonToolButton</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L224-L283"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.addButton" title="Permalink to this definition"></a></dt>
 <dd><p>Add a button to the gallery</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2748,7 +2756,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.addToggleButton">
-<span class="sig-name descname"><span class="pre">addToggleButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://doc.qt.io/qt-5/qicon.html" title="(in Qt5 v5.15)"><span class="pre">QIcon</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shortcut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tooltip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statusTip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton" title="ribbon.toolbutton.RibbonToolButton"><span class="pre">RibbonToolButton</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L255-L275"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.addToggleButton" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addToggleButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://doc.qt.io/qt-5/qicon.html" title="(in Qt5 v5.15)"><span class="pre">QIcon</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shortcut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tooltip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statusTip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton" title="ribbon.toolbutton.RibbonToolButton"><span class="pre">RibbonToolButton</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L285-L305"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.addToggleButton" title="Permalink to this definition"></a></dt>
 <dd><p>Add a toggle button to the gallery</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2768,8 +2776,20 @@ size is not enough for the widgets.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.hidePopupWidget">
+<span class="sig-name descname"><span class="pre">hidePopupWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L168-L170"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.hidePopupWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Hide the popup window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.popupMenu">
+<span class="sig-name descname"><span class="pre">popupMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.menu.RibbonPermanentMenu" title="ribbon.menu.RibbonPermanentMenu"><span class="pre">RibbonPermanentMenu</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L152-L154"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.popupMenu" title="Permalink to this definition"></a></dt>
+<dd><p>Return the popup menu.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.popupWindowSize">
-<span class="sig-name descname"><span class="pre">popupWindowSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L142-L147"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.popupWindowSize" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">popupWindowSize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L172-L177"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.popupWindowSize" title="Permalink to this definition"></a></dt>
 <dd><p>Return the size of the popup window</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2780,13 +2800,13 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.resizeEvent">
-<span class="sig-name descname"><span class="pre">resizeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qresizeevent.html" title="(in Qt5 v5.15)"><span class="pre">QResizeEvent</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L126-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.resizeEvent" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">resizeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qresizeevent.html" title="(in Qt5 v5.15)"><span class="pre">QResizeEvent</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L144-L150"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.resizeEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Resize the gallery.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.setPopupHideOnClick">
-<span class="sig-name descname"><span class="pre">setPopupHideOnClick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">popupHideOnClick</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L187-L192"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.setPopupHideOnClick" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setPopupHideOnClick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">popupHideOnClick</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L217-L222"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.setPopupHideOnClick" title="Permalink to this definition"></a></dt>
 <dd><p>Set the hide on click flag</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2797,7 +2817,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.setPopupWindowSize">
-<span class="sig-name descname"><span class="pre">setPopupWindowSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qsize.html" title="(in Qt5 v5.15)"><span class="pre">QSize</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L149-L154"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.setPopupWindowSize" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setPopupWindowSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qsize.html" title="(in Qt5 v5.15)"><span class="pre">QSize</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L179-L184"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.setPopupWindowSize" title="Permalink to this definition"></a></dt>
 <dd><p>Set the size of the popup window</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2808,13 +2828,13 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.setSelectedButton">
-<span class="sig-name descname"><span class="pre">setSelectedButton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L156-L163"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.setSelectedButton" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setSelectedButton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L186-L193"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.setSelectedButton" title="Permalink to this definition"></a></dt>
 <dd><p>Set the selected button</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGallery.showPopup">
-<span class="sig-name descname"><span class="pre">showPopup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L133-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.showPopup" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">showPopup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L156-L166"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGallery.showPopup" title="Permalink to this definition"></a></dt>
 <dd><p>Show the popup window</p>
 </dd></dl>
 
@@ -2825,7 +2845,7 @@ size is not enough for the widgets.</p>
 <h3>RibbonGalleryListWidget<a class="headerlink" href="#ribbongallerylistwidget" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryListWidget">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L9-L31"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L15-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qlistwidget.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QListWidget</span></code></a></p>
 <p>Gallery list widget.</p>
 <p class="rubric">Methods</p>
@@ -2848,19 +2868,19 @@ size is not enough for the widgets.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryListWidget.resizeEvent">
-<span class="sig-name descname"><span class="pre">resizeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qresizeevent.html" title="(in Qt5 v5.15)"><span class="pre">QResizeEvent</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L21-L23"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget.resizeEvent" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">resizeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qresizeevent.html" title="(in Qt5 v5.15)"><span class="pre">QResizeEvent</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L27-L29"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget.resizeEvent" title="Permalink to this definition"></a></dt>
 <dd><p>Resize the list widget.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryListWidget.scrollToNextRow">
-<span class="sig-name descname"><span class="pre">scrollToNextRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L25-L27"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget.scrollToNextRow" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">scrollToNextRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L31-L33"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget.scrollToNextRow" title="Permalink to this definition"></a></dt>
 <dd><p>Scroll to the next row.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryListWidget.scrollToPreviousRow">
-<span class="sig-name descname"><span class="pre">scrollToPreviousRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L29-L31"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget.scrollToPreviousRow" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">scrollToPreviousRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L35-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryListWidget.scrollToPreviousRow" title="Permalink to this definition"></a></dt>
 <dd><p>Scroll to the previous row.</p>
 </dd></dl>
 
@@ -2871,7 +2891,7 @@ size is not enough for the widgets.</p>
 <h3>RibbonGalleryButton<a class="headerlink" href="#ribbongallerybutton" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryButton">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryButton</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L34-L36"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryButton" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryButton</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L40-L42"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryButton" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qtoolbutton.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QToolButton</span></code></a></p>
 <p>Gallery button.</p>
 </dd></dl>
@@ -2881,9 +2901,18 @@ size is not enough for the widgets.</p>
 <h3>RibbonGalleryPopupListWidget<a class="headerlink" href="#ribbongallerypopuplistwidget" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.gallery.RibbonGalleryPopupListWidget">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryPopupListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L39-L44"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryPopupListWidget" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonGalleryPopupListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L45-L50"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonGalleryPopupListWidget" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ribbon.gallery.RibbonGalleryListWidget" title="ribbon.gallery.RibbonGalleryListWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonGalleryListWidget</span></code></a></p>
 <p>Gallery popup list widget.</p>
+</dd></dl>
+
+</section>
+<section id="ribbonpopupwidget">
+<h3>RibbonPopupWidget<a class="headerlink" href="#ribbonpopupwidget" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ribbon.gallery.RibbonPopupWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.gallery.</span></span><span class="sig-name descname"><span class="pre">RibbonPopupWidget</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/gallery.py#L11-L12"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.gallery.RibbonPopupWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qframe.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QFrame</span></code></a></p>
 </dd></dl>
 
 </section>
@@ -3039,7 +3068,7 @@ size is not enough for the widgets.</p>
 <h3>RibbonMenu<a class="headerlink" href="#ribbonmenu" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.menu.</span></span><span class="sig-name descname"><span class="pre">RibbonMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L6-L101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.menu.</span></span><span class="sig-name descname"><span class="pre">RibbonMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L7-L103"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu" title="Permalink to this definition"></a></dt>
 <dt class="sig sig-object py">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.menu.</span></span><span class="sig-name descname"><span class="pre">RibbonMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qmenu.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMenu</span></code></a></p>
@@ -3075,7 +3104,7 @@ size is not enough for the widgets.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addFormLayoutWidget">
-<span class="sig-name descname"><span class="pre">addFormLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qformlayout.html" title="(in Qt5 v5.15)"><span class="pre">QFormLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L72-L81"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addFormLayoutWidget" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addFormLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qformlayout.html" title="(in Qt5 v5.15)"><span class="pre">QFormLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L74-L83"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addFormLayoutWidget" title="Permalink to this definition"></a></dt>
 <dd><p>Add a form layout widget to the menu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -3086,7 +3115,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addGridLayoutWidget">
-<span class="sig-name descname"><span class="pre">addGridLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qgridlayout.html" title="(in Qt5 v5.15)"><span class="pre">QGridLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L61-L70"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addGridLayoutWidget" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addGridLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qgridlayout.html" title="(in Qt5 v5.15)"><span class="pre">QGridLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L63-L72"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addGridLayoutWidget" title="Permalink to this definition"></a></dt>
 <dd><p>Add a grid layout widget to the menu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -3097,7 +3126,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addHorizontalLayoutWidget">
-<span class="sig-name descname"><span class="pre">addHorizontalLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qhboxlayout.html" title="(in Qt5 v5.15)"><span class="pre">QHBoxLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L39-L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addHorizontalLayoutWidget" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addHorizontalLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qhboxlayout.html" title="(in Qt5 v5.15)"><span class="pre">QHBoxLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L41-L50"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addHorizontalLayoutWidget" title="Permalink to this definition"></a></dt>
 <dd><p>Add a horizontal layout widget to the menu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -3108,7 +3137,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addLabel">
-<span class="sig-name descname"><span class="pre">addLabel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qt-alignment.html" title="(in Qt5 v5.15)"><span class="pre">Alignment</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L93-L101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addLabel" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addLabel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qt-alignment.html" title="(in Qt5 v5.15)"><span class="pre">Alignment</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L95-L103"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addLabel" title="Permalink to this definition"></a></dt>
 <dd><p>Add a label to the menu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3122,7 +3151,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addSpacing">
-<span class="sig-name descname"><span class="pre">addSpacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L83-L91"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addSpacing" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addSpacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L85-L93"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addSpacing" title="Permalink to this definition"></a></dt>
 <dd><p>Add spacing to the menu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3133,7 +3162,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addVerticalLayoutWidget">
-<span class="sig-name descname"><span class="pre">addVerticalLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qvboxlayout.html" title="(in Qt5 v5.15)"><span class="pre">QVBoxLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L50-L59"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addVerticalLayoutWidget" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addVerticalLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qvboxlayout.html" title="(in Qt5 v5.15)"><span class="pre">QVBoxLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L52-L61"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addVerticalLayoutWidget" title="Permalink to this definition"></a></dt>
 <dd><p>Add a vertical layout widget to the menu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -3144,7 +3173,7 @@ size is not enough for the widgets.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addWidget">
-<span class="sig-name descname"><span class="pre">addWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html" title="(in Qt5 v5.15)"><span class="pre">QWidget</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L30-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addWidget" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">addWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html" title="(in Qt5 v5.15)"><span class="pre">QWidget</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L32-L39"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addWidget" title="Permalink to this definition"></a></dt>
 <dd><p>Add a widget to the menu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3152,6 +3181,54 @@ size is not enough for the widgets.</p>
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="ribbonpermanentmenu">
+<h3>RibbonPermanentMenu<a class="headerlink" href="#ribbonpermanentmenu" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonPermanentMenu">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.menu.</span></span><span class="sig-name descname"><span class="pre">RibbonPermanentMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L106-L118"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonPermanentMenu" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.menu.</span></span><span class="sig-name descname"><span class="pre">RibbonPermanentMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#ribbon.menu.RibbonMenu" title="ribbon.menu.RibbonMenu"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonMenu</span></code></a></p>
+<p>A permanent menu.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.menu.RibbonPermanentMenu.actionEvent" title="ribbon.menu.RibbonPermanentMenu.actionEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">actionEvent</span></code></a>(self, QActionEvent)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.menu.RibbonPermanentMenu.hideEvent" title="ribbon.menu.RibbonPermanentMenu.hideEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hideEvent</span></code></a>(self, QHideEvent)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 60%" />
+<col style="width: 40%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>actionAdded</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonPermanentMenu.actionEvent">
+<span class="sig-name descname"><span class="pre">actionEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QActionEvent</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L115-L118"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonPermanentMenu.actionEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonPermanentMenu.hideEvent">
+<span class="sig-name descname"><span class="pre">hideEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QHideEvent</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L112-L113"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonPermanentMenu.hideEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
