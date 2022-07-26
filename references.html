@@ -89,6 +89,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#ribbonverticalseparator">RibbonVerticalSeparator</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#ribbon-menu">Ribbon Menu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ribbonmenu">RibbonMenu</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -2890,7 +2894,7 @@ size is not enough for the widgets.</p>
 <h3>RibbonToolButton<a class="headerlink" href="#ribbontoolbutton" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.toolbutton.RibbonToolButton">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonToolButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L14-L53"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonToolButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L16-L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qtoolbutton.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QToolButton</span></code></a></p>
 <p>Tool button that is showed in the ribbon.</p>
 <p class="rubric">Methods</p>
@@ -2900,14 +2904,28 @@ size is not enough for the widgets.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton.setButtonStyle" title="ribbon.toolbutton.RibbonToolButton.setButtonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setButtonStyle</span></code></a>(style)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton.addRibbonMenu" title="ribbon.toolbutton.RibbonToolButton.addRibbonMenu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addRibbonMenu</span></code></a>()</p></td>
+<td><p>Add a ribbon menu for the button.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.toolbutton.RibbonToolButton.setButtonStyle" title="ribbon.toolbutton.RibbonToolButton.setButtonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setButtonStyle</span></code></a>(style)</p></td>
 <td><p>Set the button style of the button.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
+<dt class="sig sig-object py" id="ribbon.toolbutton.RibbonToolButton.addRibbonMenu">
+<span class="sig-name descname"><span class="pre">addRibbonMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#ribbon.menu.RibbonMenu" title="ribbon.menu.RibbonMenu"><span class="pre">RibbonMenu</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L57-L64"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton.addRibbonMenu" title="Permalink to this definition"></a></dt>
+<dd><p>Add a ribbon menu for the button.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The added ribbon menu.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ribbon.toolbutton.RibbonToolButton.setButtonStyle">
-<span class="sig-name descname"><span class="pre">setButtonStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ribbon.toolbutton.RibbonButtonStyle" title="ribbon.toolbutton.RibbonButtonStyle"><span class="pre">RibbonButtonStyle</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L36-L53"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton.setButtonStyle" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">setButtonStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ribbon.toolbutton.RibbonButtonStyle" title="ribbon.toolbutton.RibbonButtonStyle"><span class="pre">RibbonButtonStyle</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L38-L55"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonToolButton.setButtonStyle" title="Permalink to this definition"></a></dt>
 <dd><p>Set the button style of the button.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2923,7 +2941,7 @@ size is not enough for the widgets.</p>
 <h3>RibbonButtonStyle<a class="headerlink" href="#ribbonbuttonstyle" title="Permalink to this headline"></a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="ribbon.toolbutton.RibbonButtonStyle">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonButtonStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L7-L11"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonButtonStyle" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.toolbutton.</span></span><span class="sig-name descname"><span class="pre">RibbonButtonStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/toolbutton.py#L9-L13"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.toolbutton.RibbonButtonStyle" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
 <p>Button style, Small, Medium, or Large.</p>
 </dd></dl>
@@ -2997,6 +3015,130 @@ size is not enough for the widgets.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.separator.</span></span><span class="sig-name descname"><span class="pre">RibbonVerticalSeparator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/separator.py#L88-L97"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.separator.RibbonVerticalSeparator" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ribbon.separator.RibbonSeparator" title="ribbon.separator.RibbonSeparator"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonSeparator</span></code></a></p>
 <p>Vertical separator.</p>
+</dd></dl>
+
+</section>
+</section>
+<section id="ribbon-menu">
+<h2>Ribbon Menu<a class="headerlink" href="#ribbon-menu" title="Permalink to this headline"></a></h2>
+<section id="ribbonmenu">
+<h3>RibbonMenu<a class="headerlink" href="#ribbonmenu" title="Permalink to this headline"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.menu.</span></span><span class="sig-name descname"><span class="pre">RibbonMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L6-L101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.menu.</span></span><span class="sig-name descname"><span class="pre">RibbonMenu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference external" href="https://doc.qt.io/qt-5/qmenu.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMenu</span></code></a></p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.menu.RibbonMenu.addFormLayoutWidget" title="ribbon.menu.RibbonMenu.addFormLayoutWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addFormLayoutWidget</span></code></a>()</p></td>
+<td><p>Add a form layout widget to the menu.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.menu.RibbonMenu.addGridLayoutWidget" title="ribbon.menu.RibbonMenu.addGridLayoutWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addGridLayoutWidget</span></code></a>()</p></td>
+<td><p>Add a grid layout widget to the menu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.menu.RibbonMenu.addHorizontalLayoutWidget" title="ribbon.menu.RibbonMenu.addHorizontalLayoutWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addHorizontalLayoutWidget</span></code></a>()</p></td>
+<td><p>Add a horizontal layout widget to the menu.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.menu.RibbonMenu.addLabel" title="ribbon.menu.RibbonMenu.addLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addLabel</span></code></a>([text, alignment])</p></td>
+<td><p>Add a label to the menu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.menu.RibbonMenu.addSpacing" title="ribbon.menu.RibbonMenu.addSpacing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addSpacing</span></code></a>([spacing])</p></td>
+<td><p>Add spacing to the menu.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.menu.RibbonMenu.addVerticalLayoutWidget" title="ribbon.menu.RibbonMenu.addVerticalLayoutWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addVerticalLayoutWidget</span></code></a>()</p></td>
+<td><p>Add a vertical layout widget to the menu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.menu.RibbonMenu.addWidget" title="ribbon.menu.RibbonMenu.addWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addWidget</span></code></a>(widget)</p></td>
+<td><p>Add a widget to the menu.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addFormLayoutWidget">
+<span class="sig-name descname"><span class="pre">addFormLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qformlayout.html" title="(in Qt5 v5.15)"><span class="pre">QFormLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L72-L81"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addFormLayoutWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Add a form layout widget to the menu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The form layout.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addGridLayoutWidget">
+<span class="sig-name descname"><span class="pre">addGridLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qgridlayout.html" title="(in Qt5 v5.15)"><span class="pre">QGridLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L61-L70"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addGridLayoutWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Add a grid layout widget to the menu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The grid layout.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addHorizontalLayoutWidget">
+<span class="sig-name descname"><span class="pre">addHorizontalLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qhboxlayout.html" title="(in Qt5 v5.15)"><span class="pre">QHBoxLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L39-L48"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addHorizontalLayoutWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Add a horizontal layout widget to the menu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The horizontal layout.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addLabel">
+<span class="sig-name descname"><span class="pre">addLabel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qt-alignment.html" title="(in Qt5 v5.15)"><span class="pre">Alignment</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L93-L101"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addLabel" title="Permalink to this definition"></a></dt>
+<dd><p>Add a label to the menu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – The text of the label.</p></li>
+<li><p><strong>alignment</strong> – The alignment of the label.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addSpacing">
+<span class="sig-name descname"><span class="pre">addSpacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L83-L91"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addSpacing" title="Permalink to this definition"></a></dt>
+<dd><p>Add spacing to the menu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spacing</strong> – The spacing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addVerticalLayoutWidget">
+<span class="sig-name descname"><span class="pre">addVerticalLayoutWidget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://doc.qt.io/qt-5/qvboxlayout.html" title="(in Qt5 v5.15)"><span class="pre">QVBoxLayout</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L50-L59"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addVerticalLayoutWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Add a vertical layout widget to the menu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The vertical layout.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.menu.RibbonMenu.addWidget">
+<span class="sig-name descname"><span class="pre">addWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html" title="(in Qt5 v5.15)"><span class="pre">QWidget</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/menu.py#L30-L37"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.menu.RibbonMenu.addWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Add a widget to the menu.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>widget</strong> – The widget to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
