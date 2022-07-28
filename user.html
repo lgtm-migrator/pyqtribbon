@@ -42,7 +42,11 @@
 <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ribbon.html">The Ribbon Bar</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">User Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#instantiate-a-ribbon-bar">Instantiate a Ribbon Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-ribbonscreenshotwindow-class">The RibbonScreenShotWindow Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instantiate-a-ribbon-bar">Instantiate a Ribbon Bar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#customize-ribbon-bar">Customize Ribbon Bar</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#general-setups">General Setups</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setup-application-button">Setup Application Button</a></li>
@@ -50,18 +54,21 @@
 <li class="toctree-l3"><a class="reference internal" href="#setup-category-tab-bar">Setup Category Tab Bar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setup-quick-access-bar">Setup Quick Access Bar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setup-right-tool-bar">Setup Right Tool Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#manage-categories">Manage Categories</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#customize-categories">Customize Categories</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#setup-styles">Setup Styles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#manage-panels">Manage Panels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Example</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#customize-panels">Customize Panels</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#setup-title-label">Setup Title Label</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setup-panel-option-button">Setup Panel Option Button</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#add-widgets-to-panels">Add Widgets to Panels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Example</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#a-complete-example">A Complete Example</a></li>
@@ -96,6 +103,49 @@
              
   <section id="user-manual">
 <h1>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline"></a></h1>
+<section id="the-ribbonscreenshotwindow-class">
+<h2>The RibbonScreenShotWindow Class<a class="headerlink" href="#the-ribbonscreenshotwindow-class" title="Permalink to this headline"></a></h2>
+<p>The RibbonScreenShotWindow class is just for taking a screenshot of the window, the window will be closed 0.1s
+after it is shown. It is just used for documenting the window.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ribbon.tests.RibbonScreenShotWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.tests.</span></span><span class="sig-name descname"><span class="pre">RibbonScreenShotWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'shot.jpg'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/tests.py#L4-L31"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.tests.RibbonScreenShotWindow" title="Permalink to this definition"></a></dt>
+<dd><p>This class is just for taking a screenshot of the window, the window will be closed 0.1s after it is shown.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.tests.RibbonScreenShotWindow.closeEvent" title="ribbon.tests.RibbonScreenShotWindow.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Close event of the window.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName" title="ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setScreenShotFileName</span></code></a>(fileName)</p></td>
+<td><p>Set the file name for the screenshot.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.tests.RibbonScreenShotWindow.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/tests.py#L25-L31"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.tests.RibbonScreenShotWindow.closeEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Close event of the window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName">
+<span class="sig-name descname"><span class="pre">setScreenShotFileName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/tests.py#L18-L23"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName" title="Permalink to this definition"></a></dt>
+<dd><p>Set the file name for the screenshot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fileName</strong> – The file name for the screenshot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="instantiate-a-ribbon-bar">
 <h2>Instantiate a Ribbon Bar<a class="headerlink" href="#instantiate-a-ribbon-bar" title="Permalink to this headline"></a></h2>
 <p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar" title="ribbon.ribbonbar.RibbonBar"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonBar</span></code></a> is inherited from <a class="reference external" href="https://doc.qt.io/qt-5/qmenubar.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMenuBar</span></code></a>,
@@ -109,6 +159,34 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <span class="o">...</span>
 </pre></div>
 </div>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h3>
+<p>For example, using the following code,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">qtpy</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
+
+<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">RibbonScreenShotWindow</span><span class="p">(</span><span class="s1">&#39;ribbonbar.png&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Ribbon bar</span>
+    <span class="n">ribbonbar</span> <span class="o">=</span> <span class="n">RibbonBar</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setMenuBar</span><span class="p">(</span><span class="n">ribbonbar</span><span class="p">)</span>
+
+    <span class="c1"># Show the window</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>You can get a window like this:</p>
+<a class="reference internal image-reference" href="_images/ribbonbar.png"><img alt="_images/ribbonbar.png" class="align-center" src="_images/ribbonbar.png" style="width: 100%;" /></a>
+</section>
 </section>
 <section id="customize-ribbon-bar">
 <h2>Customize Ribbon Bar<a class="headerlink" href="#customize-ribbon-bar" title="Permalink to this headline"></a></h2>
@@ -259,6 +337,48 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 </tbody>
 </table>
 </section>
+<section id="id1">
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<p>For example, using the following code,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QToolButton</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+
+<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">RibbonScreenShotWindow</span><span class="p">(</span><span class="s1">&#39;ribbonbar-customize.png&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Ribbon bar</span>
+    <span class="n">ribbonbar</span> <span class="o">=</span> <span class="n">RibbonBar</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setMenuBar</span><span class="p">(</span><span class="n">ribbonbar</span><span class="p">)</span>
+
+    <span class="c1"># Title of the ribbon</span>
+    <span class="n">ribbonbar</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s1">&#39;This is my custom title&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Quick Access Bar</span>
+    <span class="n">qbutton</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+    <span class="n">qbutton</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s1">&#39;Quick Button&#39;</span><span class="p">)</span>
+    <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addQuickAccessButton</span><span class="p">(</span><span class="n">qbutton</span><span class="p">)</span>
+    
+    <span class="c1"># Right toolbar</span>
+    <span class="n">rbutton</span> <span class="o">=</span> <span class="n">QToolButton</span><span class="p">()</span>
+    <span class="n">rbutton</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s1">&#39;Right Button&#39;</span><span class="p">)</span>
+    <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addRightToolButton</span><span class="p">(</span><span class="n">rbutton</span><span class="p">)</span>
+
+    <span class="c1"># Show the window</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>You can get a window like this:</p>
+<a class="reference internal image-reference" href="_images/ribbonbar-customize.png"><img alt="_images/ribbonbar-customize.png" class="align-center" src="_images/ribbonbar-customize.png" style="width: 100%;" /></a>
+</section>
 <section id="manage-categories">
 <h3>Manage Categories<a class="headerlink" href="#manage-categories" title="Permalink to this headline"></a></h3>
 <table class="autosummary longtable docutils align-default">
@@ -355,6 +475,66 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 </tbody>
 </table>
 </section>
+<section id="id2">
+<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<p>For example, using the following code,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+
+<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span><span class="p">,</span> <span class="n">RibbonCategoryStyle</span>
+<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">RibbonScreenShotWindow</span><span class="p">(</span><span class="s1">&#39;category.png&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Ribbon bar</span>
+    <span class="n">ribbonbar</span> <span class="o">=</span> <span class="n">RibbonBar</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setMenuBar</span><span class="p">(</span><span class="n">ribbonbar</span><span class="p">)</span>
+    
+    <span class="c1"># Categories</span>
+    <span class="n">category1</span> <span class="o">=</span> <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addCategory</span><span class="p">(</span><span class="s1">&#39;Category 1&#39;</span><span class="p">)</span>
+    <span class="n">panel1</span> <span class="o">=</span> <span class="n">category1</span><span class="o">.</span><span class="n">addPanel</span><span class="p">(</span><span class="s1">&#39;Panel 1&#39;</span><span class="p">)</span>
+    <span class="n">panel1</span><span class="o">.</span><span class="n">addLargeButton</span><span class="p">(</span><span class="s1">&#39;Large Button 1&#39;</span><span class="p">,</span> <span class="n">QIcon</span><span class="p">(</span><span class="s1">&#39;python.png&#39;</span><span class="p">))</span>
+    
+    <span class="n">category2</span> <span class="o">=</span> <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addContextCategory</span><span class="p">(</span><span class="s1">&#39;Category 2&#39;</span><span class="p">)</span>
+    <span class="n">panel12</span> <span class="o">=</span> <span class="n">category2</span><span class="o">.</span><span class="n">addPanel</span><span class="p">(</span><span class="s1">&#39;Panel 2&#39;</span><span class="p">)</span>
+    <span class="n">panel12</span><span class="o">.</span><span class="n">addLargeButton</span><span class="p">(</span><span class="s1">&#39;Large Button 2&#39;</span><span class="p">,</span> <span class="n">QIcon</span><span class="p">(</span><span class="s1">&#39;python.png&#39;</span><span class="p">))</span>
+
+    <span class="n">categories</span> <span class="o">=</span> <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addCategoriesBy</span><span class="p">({</span>
+        <span class="s1">&#39;Category 6&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">RibbonCategoryStyle</span><span class="o">.</span><span class="n">Normal</span><span class="p">,</span>
+            <span class="s2">&quot;panels&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;Panel 1&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;showPanelOptionButton&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">&quot;widgets&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;Button 1&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                <span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span>
+                                <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a tooltip&quot;</span><span class="p">,</span>
+                            <span class="p">}</span>
+                        <span class="p">},</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+    <span class="n">ribbonbar</span><span class="o">.</span><span class="n">setCurrentCategory</span><span class="p">(</span><span class="n">categories</span><span class="p">[</span><span class="s1">&#39;Category 6&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Show the window</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>You can get a window like this:</p>
+<a class="reference internal image-reference" href="_images/category.png"><img alt="_images/category.png" class="align-center" src="_images/category.png" style="width: 100%;" /></a>
+</section>
 </section>
 <section id="customize-panels">
 <h2>Customize Panels<a class="headerlink" href="#customize-panels" title="Permalink to this headline"></a></h2>
@@ -390,7 +570,7 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <td><p>Set the tooltip of the panel option button.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.panelOptionClicked</span></code>(bool)</p></td>
-<td><p>pyqtSignal(<a href="#id1"><span class="problematic" id="id2">*</span></a>types, name: str = ..., revision: int = ..., arguments: Sequence = ...) -&gt; PYQT_SIGNAL</p></td>
+<td><p>pyqtSignal(<a href="#id3"><span class="problematic" id="id4">*</span></a>types, name: str = ..., revision: int = ..., arguments: Sequence = ...) -&gt; PYQT_SIGNAL</p></td>
 </tr>
 </tbody>
 </table>
@@ -516,6 +696,73 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 </tr>
 </tbody>
 </table>
+</section>
+<section id="id5">
+<h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<p>For example, using the following code,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QToolButton</span><span class="p">,</span> <span class="n">QMenu</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QLineEdit</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+<span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+
+<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">RibbonScreenShotWindow</span><span class="p">(</span><span class="s1">&#39;panel.png&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Ribbon bar</span>
+    <span class="n">ribbonbar</span> <span class="o">=</span> <span class="n">RibbonBar</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setMenuBar</span><span class="p">(</span><span class="n">ribbonbar</span><span class="p">)</span>
+    
+    <span class="n">category1</span> <span class="o">=</span> <span class="n">ribbonbar</span><span class="o">.</span><span class="n">addCategory</span><span class="p">(</span><span class="s2">&quot;Category 1&quot;</span><span class="p">)</span>
+    <span class="n">panel</span> <span class="o">=</span> <span class="n">category1</span><span class="o">.</span><span class="n">addPanel</span><span class="p">(</span><span class="s2">&quot;Panel 1&quot;</span><span class="p">,</span> <span class="n">showPanelOptionButton</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;Button 1&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;Button 2&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addSmallButton</span><span class="p">(</span><span class="s2">&quot;Button 3&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumToggleButton</span><span class="p">(</span><span class="s2">&quot;Show/Hide Category 2&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addVerticalSeparator</span><span class="p">()</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumToggleButton</span><span class="p">(</span><span class="s2">&quot;Show/Hide Category 3&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumToggleButton</span><span class="p">(</span><span class="s2">&quot;Show/Hide Category 4/5&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span>
+                                                       <span class="n">colSpan</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alignment</span><span class="o">=</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignLeft</span><span class="p">)</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addLargeButton</span><span class="p">(</span><span class="s2">&quot;Button 4&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addVerticalSeparator</span><span class="p">()</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumButton</span><span class="p">(</span><span class="s2">&quot;Button 5&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addMediumButton</span><span class="p">(</span><span class="s2">&quot;Button 6&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+
+    <span class="n">button</span> <span class="o">=</span> <span class="n">panel</span><span class="o">.</span><span class="n">addLargeButton</span><span class="p">(</span><span class="s2">&quot;Button 7&quot;</span><span class="p">,</span> <span class="n">icon</span><span class="o">=</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">menu</span> <span class="o">=</span> <span class="n">QMenu</span><span class="p">()</span>
+    <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span> <span class="s2">&quot;Action 1&quot;</span><span class="p">)</span>
+    <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span> <span class="s2">&quot;Action 2&quot;</span><span class="p">)</span>
+    <span class="n">menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span> <span class="s2">&quot;Action 3&quot;</span><span class="p">)</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">setMenu</span><span class="p">(</span><span class="n">menu</span><span class="p">)</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">setPopupMode</span><span class="p">(</span><span class="n">QToolButton</span><span class="o">.</span><span class="n">InstantPopup</span><span class="p">)</span>
+    <span class="n">panel</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">rowSpan</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="n">gallery</span> <span class="o">=</span> <span class="n">panel</span><span class="o">.</span><span class="n">addGallery</span><span class="p">(</span><span class="n">minimumWidth</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">popupHideOnClick</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">gallery</span><span class="o">.</span><span class="n">addToggleButton</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;item </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">))</span>
+    <span class="n">popupMenu</span> <span class="o">=</span> <span class="n">gallery</span><span class="o">.</span><span class="n">popupMenu</span><span class="p">()</span>
+    <span class="n">submenu</span> <span class="o">=</span> <span class="n">popupMenu</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span> <span class="s1">&#39;Submenu&#39;</span><span class="p">)</span>
+    <span class="n">submenu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span> <span class="s2">&quot;Action 4&quot;</span><span class="p">)</span>
+    <span class="n">popupMenu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span> <span class="s2">&quot;Action 1&quot;</span><span class="p">)</span>
+    <span class="n">popupMenu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;python.png&quot;</span><span class="p">),</span> <span class="s2">&quot;Action 2&quot;</span><span class="p">)</span>
+    <span class="n">popupMenu</span><span class="o">.</span><span class="n">addSeparator</span><span class="p">()</span>
+    <span class="n">popupMenu</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;This is a custom widget&quot;</span><span class="p">))</span>
+    <span class="n">formLayout</span> <span class="o">=</span> <span class="n">popupMenu</span><span class="o">.</span><span class="n">addFormLayoutWidget</span><span class="p">()</span>
+    <span class="n">formLayout</span><span class="o">.</span><span class="n">addRow</span><span class="p">(</span><span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Row 1&quot;</span><span class="p">),</span> <span class="n">QLineEdit</span><span class="p">())</span>
+
+    <span class="c1"># Show the window</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1300</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>You can get a window like this:</p>
+<a class="reference internal image-reference" href="_images/panel.png"><img alt="_images/panel.png" class="align-center" src="_images/panel.png" style="width: 100%;" /></a>
 </section>
 </section>
 <section id="a-complete-example">
