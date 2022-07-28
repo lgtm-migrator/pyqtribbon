@@ -105,46 +105,8 @@
 <h1>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline"></a></h1>
 <section id="the-ribbonscreenshotwindow-class">
 <h2>The RibbonScreenShotWindow Class<a class="headerlink" href="#the-ribbonscreenshotwindow-class" title="Permalink to this headline"></a></h2>
-<p>The RibbonScreenShotWindow class is just for taking a screenshot of the window, the window will be closed 0.1s
-after it is shown. It is just used for documenting the window.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="ribbon.tests.RibbonScreenShotWindow">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.tests.</span></span><span class="sig-name descname"><span class="pre">RibbonScreenShotWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'shot.jpg'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/tests.py#L4-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.tests.RibbonScreenShotWindow" title="Permalink to this definition"></a></dt>
-<dd><p>This class is just for taking a screenshot of the window, the window will be closed 0.1s after it is shown.</p>
-<p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.tests.RibbonScreenShotWindow.closeEvent" title="ribbon.tests.RibbonScreenShotWindow.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Close event of the window.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName" title="ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setScreenShotFileName</span></code></a>(fileName)</p></td>
-<td><p>Set the file name for the screenshot.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py method">
-<dt class="sig sig-object py" id="ribbon.tests.RibbonScreenShotWindow.closeEvent">
-<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/tests.py#L26-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.tests.RibbonScreenShotWindow.closeEvent" title="Permalink to this definition"></a></dt>
-<dd><p>Close event of the window.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName">
-<span class="sig-name descname"><span class="pre">setScreenShotFileName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/tests.py#L19-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.tests.RibbonScreenShotWindow.setScreenShotFileName" title="Permalink to this definition"></a></dt>
-<dd><p>Set the file name for the screenshot.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>fileName</strong> – The file name for the screenshot.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonScreenShotWindow</span></code> class is just for taking a screenshot of the window,
+the window will be closed 0.1s after it is shown. It is just used for documenting the window.</p>
 </section>
 <section id="instantiate-a-ribbon-bar">
 <h2>Instantiate a Ribbon Bar<a class="headerlink" href="#instantiate-a-ribbon-bar" title="Permalink to this headline"></a></h2>
@@ -167,7 +129,7 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <span class="kn">from</span> <span class="nn">qtpy</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
 
 <span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
-<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
@@ -343,10 +305,9 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QToolButton</span>
-<span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
 
 <span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
-<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
@@ -484,7 +445,7 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
 
 <span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span><span class="p">,</span> <span class="n">RibbonCategoryStyle</span>
-<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
@@ -707,7 +668,7 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
 
 <span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
-<span class="kn">from</span> <span class="nn">ribbon.tests</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
