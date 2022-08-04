@@ -68,7 +68,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#setup-title-label">Setup Title Label</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setup-panel-option-button">Setup Panel Option Button</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#add-widgets-to-panels">Add Widgets to Panels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Example</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#a-complete-example">A Complete Example</a></li>
@@ -105,53 +105,15 @@
 <h1>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline"></a></h1>
 <section id="the-ribbonscreenshotwindow-class">
 <h2>The RibbonScreenShotWindow Class<a class="headerlink" href="#the-ribbonscreenshotwindow-class" title="Permalink to this headline"></a></h2>
-<p>The <a class="reference internal" href="#ribbon.screenshotwindow.RibbonScreenShotWindow" title="ribbon.screenshotwindow.RibbonScreenShotWindow"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonScreenShotWindow</span></code></a> class is just for taking a screenshot of the window,
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonScreenShotWindow</span></code> class is just for taking a screenshot of the window,
 the window will be closed 0.1s after it is shown. It is just used for documenting the window.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="ribbon.screenshotwindow.RibbonScreenShotWindow">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ribbon.screenshotwindow.</span></span><span class="sig-name descname"><span class="pre">RibbonScreenShotWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'shot.jpg'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/screenshotwindow.py#L4-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.screenshotwindow.RibbonScreenShotWindow" title="Permalink to this definition"></a></dt>
-<dd><p>This class is just for taking a screenshot of the window, the window will be closed 0.1s after it is shown.</p>
-<p class="rubric">Methods</p>
-<table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ribbon.screenshotwindow.RibbonScreenShotWindow.setScreenShotFileName" title="ribbon.screenshotwindow.RibbonScreenShotWindow.setScreenShotFileName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setScreenShotFileName</span></code></a>(fileName)</p></td>
-<td><p>Set the file name for the screenshot.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ribbon.screenshotwindow.RibbonScreenShotWindow.takeScreenShot" title="ribbon.screenshotwindow.RibbonScreenShotWindow.takeScreenShot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">takeScreenShot</span></code></a>()</p></td>
-<td><p>Take a screenshot of the window.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="py method">
-<dt class="sig sig-object py" id="ribbon.screenshotwindow.RibbonScreenShotWindow.setScreenShotFileName">
-<span class="sig-name descname"><span class="pre">setScreenShotFileName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/screenshotwindow.py#L19-L24"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.screenshotwindow.RibbonScreenShotWindow.setScreenShotFileName" title="Permalink to this definition"></a></dt>
-<dd><p>Set the file name for the screenshot.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>fileName</strong> – The file name for the screenshot.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="ribbon.screenshotwindow.RibbonScreenShotWindow.takeScreenShot">
-<span class="sig-name descname"><span class="pre">takeScreenShot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/ribbon/screenshotwindow.py#L26-L32"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ribbon.screenshotwindow.RibbonScreenShotWindow.takeScreenShot" title="Permalink to this definition"></a></dt>
-<dd><p>Take a screenshot of the window.</p>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 <section id="instantiate-a-ribbon-bar">
 <h2>Instantiate a Ribbon Bar<a class="headerlink" href="#instantiate-a-ribbon-bar" title="Permalink to this headline"></a></h2>
-<p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar" title="ribbon.ribbonbar.RibbonBar"><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonBar</span></code></a> is inherited from <a class="reference external" href="https://doc.qt.io/qt-5/qmenubar.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMenuBar</span></code></a>,
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">RibbonBar</span></code> is inherited from <a class="reference external" href="https://doc.qt.io/qt-5/qmenubar.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMenuBar</span></code></a>,
 you can use the <cite>setMenuBar</cite> method of <a class="reference external" href="https://doc.qt.io/qt-5/qmainwindow.html" title="(in Qt5 v5.15)"><code class="docutils literal notranslate"><span class="pre">QMainWindow</span></code></a> to set the ribbon bar as the main menu bar.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
 
 <span class="n">window</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">()</span>
 <span class="n">ribbon</span> <span class="o">=</span> <span class="n">RibbonBar</span><span class="p">()</span>
@@ -166,8 +128,8 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 
 <span class="kn">from</span> <span class="nn">qtpy</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
 
-<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
-<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
@@ -198,27 +160,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRibbonStyle" title="ribbon.ribbonbar.RibbonBar.setRibbonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRibbonStyle</span></code></a>(style)</p></td>
-<td><p>Set the style of the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.ribbonHeight" title="ribbon.ribbonbar.RibbonBar.ribbonHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.ribbonHeight</span></code></a>()</p></td>
-<td><p>Get the total height of the ribbon.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRibbonHeight" title="ribbon.ribbonbar.RibbonBar.setRibbonHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRibbonHeight</span></code></a>(height)</p></td>
-<td><p>Set the total height of the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.showRibbon" title="ribbon.ribbonbar.RibbonBar.showRibbon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.showRibbon</span></code></a>()</p></td>
-<td><p>Show the ribbon.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.hideRibbon" title="ribbon.ribbonbar.RibbonBar.hideRibbon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.hideRibbon</span></code></a>()</p></td>
-<td><p>Hide the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.ribbonVisible" title="ribbon.ribbonbar.RibbonBar.ribbonVisible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.ribbonVisible</span></code></a>()</p></td>
-<td><p>Get the visibility of the ribbon.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRibbonVisible" title="ribbon.ribbonbar.RibbonBar.setRibbonVisible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRibbonVisible</span></code></a>(visible)</p></td>
-<td><p>Set the visibility of the ribbon.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -230,15 +171,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.applicationOptionButton" title="ribbon.ribbonbar.RibbonBar.applicationOptionButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.applicationOptionButton</span></code></a>()</p></td>
-<td><p>Return the application button.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setApplicationIcon" title="ribbon.ribbonbar.RibbonBar.setApplicationIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setApplicationIcon</span></code></a>(icon)</p></td>
-<td><p>Set the application icon.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addFileMenu" title="ribbon.ribbonbar.RibbonBar.addFileMenu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addFileMenu</span></code></a>()</p></td>
-<td><p>Add a file menu to the ribbon.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -250,12 +182,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.title" title="ribbon.ribbonbar.RibbonBar.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.title</span></code></a>()</p></td>
-<td><p>Return the title of the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setTitle" title="ribbon.ribbonbar.RibbonBar.setTitle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setTitle</span></code></a>(title)</p></td>
-<td><p>Set the title of the ribbon.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -267,15 +193,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.tabBar" title="ribbon.ribbonbar.RibbonBar.tabBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.tabBar</span></code></a>()</p></td>
-<td><p>Return the tab bar of the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.tabBarHeight" title="ribbon.ribbonbar.RibbonBar.tabBarHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.tabBarHeight</span></code></a>()</p></td>
-<td><p>Get the height of the tab bar.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setTabBarHeight" title="ribbon.ribbonbar.RibbonBar.setTabBarHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setTabBarHeight</span></code></a>([height])</p></td>
-<td><p>Set the height of the tab bar.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -287,15 +204,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.quickAccessToolBar" title="ribbon.ribbonbar.RibbonBar.quickAccessToolBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.quickAccessToolBar</span></code></a>()</p></td>
-<td><p>Return the quick access toolbar of the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addQuickAccessButton" title="ribbon.ribbonbar.RibbonBar.addQuickAccessButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addQuickAccessButton</span></code></a>(button)</p></td>
-<td><p>Add a button to the quick access bar.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setQuickAccessButtonHeight" title="ribbon.ribbonbar.RibbonBar.setQuickAccessButtonHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setQuickAccessButtonHeight</span></code></a>([height])</p></td>
-<td><p>Set the height of the quick access buttons.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -307,33 +215,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.rightToolBar" title="ribbon.ribbonbar.RibbonBar.rightToolBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.rightToolBar</span></code></a>()</p></td>
-<td><p>Return the right toolbar of the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addRightToolButton" title="ribbon.ribbonbar.RibbonBar.addRightToolButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addRightToolButton</span></code></a>(button)</p></td>
-<td><p>Add a widget to the right button bar.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setRightToolBarHeight" title="ribbon.ribbonbar.RibbonBar.setRightToolBarHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setRightToolBarHeight</span></code></a>([height])</p></td>
-<td><p>Set the height of the right buttons.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setHelpButtonIcon" title="ribbon.ribbonbar.RibbonBar.setHelpButtonIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setHelpButtonIcon</span></code></a>(icon)</p></td>
-<td><p>Set the icon of the help button.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.removeHelpButton" title="ribbon.ribbonbar.RibbonBar.removeHelpButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.removeHelpButton</span></code></a>()</p></td>
-<td><p>Remove the help button from the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.helpButtonClicked" title="ribbon.ribbonbar.RibbonBar.helpButtonClicked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.helpButtonClicked</span></code></a>(bool)</p></td>
-<td><p>Signal, the help button was clicked.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.collapseRibbonButton" title="ribbon.ribbonbar.RibbonBar.collapseRibbonButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.collapseRibbonButton</span></code></a>()</p></td>
-<td><p>Return the collapse ribbon button.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setCollapseButtonIcon" title="ribbon.ribbonbar.RibbonBar.setCollapseButtonIcon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setCollapseButtonIcon</span></code></a>(icon)</p></td>
-<td><p>Set the icon of the min button.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.removeCollapseButton" title="ribbon.ribbonbar.RibbonBar.removeCollapseButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.removeCollapseButton</span></code></a>()</p></td>
-<td><p>Remove the min button from the ribbon.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -344,8 +225,8 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 
 <span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QToolButton</span>
 
-<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
-<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
@@ -386,42 +267,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.categories" title="ribbon.ribbonbar.RibbonBar.categories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.categories</span></code></a>()</p></td>
-<td><p>Return a list of categories of the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addCategory" title="ribbon.ribbonbar.RibbonBar.addCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addCategory</span></code></a>(title[, style, color])</p></td>
-<td><p>Add a new category to the ribbon.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addCategoriesBy" title="ribbon.ribbonbar.RibbonBar.addCategoriesBy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addCategoriesBy</span></code></a>(data)</p></td>
-<td><p>Add categories from a dict.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addNormalCategory" title="ribbon.ribbonbar.RibbonBar.addNormalCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addNormalCategory</span></code></a>(title)</p></td>
-<td><p>Add a new category to the ribbon.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addContextCategory" title="ribbon.ribbonbar.RibbonBar.addContextCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addContextCategory</span></code></a>(title[, color])</p></td>
-<td><p>Add a new context category to the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.addContextCategories" title="ribbon.ribbonbar.RibbonBar.addContextCategories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.addContextCategories</span></code></a>(name, titles)</p></td>
-<td><p>Add a group of context categories with the same tab color to the ribbon.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.showContextCategory" title="ribbon.ribbonbar.RibbonBar.showContextCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.showContextCategory</span></code></a>(category)</p></td>
-<td><p>Show the given category or categories, if it is not a context category, nothing happens.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.hideContextCategory" title="ribbon.ribbonbar.RibbonBar.hideContextCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.hideContextCategory</span></code></a>(category)</p></td>
-<td><p>Hide the given category or categories, if it is not a context category, nothing happens.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.removeCategory" title="ribbon.ribbonbar.RibbonBar.removeCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.removeCategory</span></code></a>(category)</p></td>
-<td><p>Remove a category from the ribbon.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.setCurrentCategory" title="ribbon.ribbonbar.RibbonBar.setCurrentCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.setCurrentCategory</span></code></a>(category)</p></td>
-<td><p>Set the current category.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.currentCategory" title="ribbon.ribbonbar.RibbonBar.currentCategory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.currentCategory</span></code></a>()</p></td>
-<td><p>Return the current category.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.ribbonbar.RibbonBar.showCategoryByIndex" title="ribbon.ribbonbar.RibbonBar.showCategoryByIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar.showCategoryByIndex</span></code></a>(index)</p></td>
-<td><p>Show category by tab index</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -436,12 +281,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.categoryStyle" title="ribbon.category.RibbonCategory.categoryStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.categoryStyle</span></code></a>()</p></td>
-<td><p>Return the button style of the category.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.setCategoryStyle" title="ribbon.category.RibbonCategory.setCategoryStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.setCategoryStyle</span></code></a>(style)</p></td>
-<td><p>Set the button style of the category.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -453,24 +292,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.addPanel" title="ribbon.category.RibbonCategory.addPanel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.addPanel</span></code></a>(title[, ...])</p></td>
-<td><p>Add a new panel to the category.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.addPanelsBy" title="ribbon.category.RibbonCategory.addPanelsBy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.addPanelsBy</span></code></a>(data)</p></td>
-<td><p>Add panels from a dictionary.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.removePanel" title="ribbon.category.RibbonCategory.removePanel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.removePanel</span></code></a>(title)</p></td>
-<td><p>Remove a panel from the category.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.takePanel" title="ribbon.category.RibbonCategory.takePanel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.takePanel</span></code></a>(title)</p></td>
-<td><p>Remove and return a panel from the category.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.panel" title="ribbon.category.RibbonCategory.panel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.panel</span></code></a>(title)</p></td>
-<td><p>Return a panel from the category.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.category.RibbonCategory.panels" title="ribbon.category.RibbonCategory.panels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonCategory.panels</span></code></a>()</p></td>
-<td><p>Return all panels in the category.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -482,8 +303,8 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <span class="kn">from</span> <span class="nn">qtpy.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span>
 <span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
 
-<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span><span class="p">,</span> <span class="n">RibbonCategoryStyle</span>
-<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span><span class="p">,</span> <span class="n">RibbonCategoryStyle</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
@@ -545,12 +366,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.title" title="ribbon.panel.RibbonPanel.title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.title</span></code></a>()</p></td>
-<td><p>Get the title of the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.setTitle" title="ribbon.panel.RibbonPanel.setTitle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.setTitle</span></code></a>(title)</p></td>
-<td><p>Set the title of the panel.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -562,15 +377,6 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.panelOptionButton" title="ribbon.panel.RibbonPanel.panelOptionButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.panelOptionButton</span></code></a>()</p></td>
-<td><p>Return the panel option button.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.setPanelOptionToolTip" title="ribbon.panel.RibbonPanel.setPanelOptionToolTip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.setPanelOptionToolTip</span></code></a>(text)</p></td>
-<td><p>Set the tooltip of the panel option button.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.panelOptionClicked</span></code>(bool)</p></td>
-<td><p>pyqtSignal(<a href="#id3"><span class="problematic" id="id4">*</span></a>types, name: str = ..., revision: int = ..., arguments: Sequence = ...) -&gt; PYQT_SIGNAL</p></td>
-</tr>
 </tbody>
 </table>
 </section>
@@ -582,122 +388,11 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addWidget" title="ribbon.panel.RibbonPanel.addWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addWidget</span></code></a>(widget[, rowSpan, ...])</p></td>
-<td><p>Add a widget to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addWidgetsBy" title="ribbon.panel.RibbonPanel.addWidgetsBy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addWidgetsBy</span></code></a>(data)</p></td>
-<td><p>Add widgets to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.removeWidget" title="ribbon.panel.RibbonPanel.removeWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.removeWidget</span></code></a>(widget)</p></td>
-<td><p>Remove a widget from the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.widget" title="ribbon.panel.RibbonPanel.widget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.widget</span></code></a>(index)</p></td>
-<td><p>Get the widget at the given index.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.widgets" title="ribbon.panel.RibbonPanel.widgets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.widgets</span></code></a>()</p></td>
-<td><p>Get all the widgets in the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSmallWidget" title="ribbon.panel.RibbonPanel.addSmallWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSmallWidget</span></code></a>(widget[, mode, ...])</p></td>
-<td><p>Add a small widget to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addMediumWidget" title="ribbon.panel.RibbonPanel.addMediumWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addMediumWidget</span></code></a>(widget[, mode, ...])</p></td>
-<td><p>Add a medium widget to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLargeWidget" title="ribbon.panel.RibbonPanel.addLargeWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLargeWidget</span></code></a>(widget[, mode, ...])</p></td>
-<td><p>Add a large widget to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addButton" title="ribbon.panel.RibbonPanel.addButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addButton</span></code></a>([text, icon, style, ...])</p></td>
-<td><p>Add a button to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSmallButton" title="ribbon.panel.RibbonPanel.addSmallButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSmallButton</span></code></a>([text, icon, ...])</p></td>
-<td><p>Add a small button to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addMediumButton" title="ribbon.panel.RibbonPanel.addMediumButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addMediumButton</span></code></a>([text, icon, ...])</p></td>
-<td><p>Add a medium button to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLargeButton" title="ribbon.panel.RibbonPanel.addLargeButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLargeButton</span></code></a>([text, icon, ...])</p></td>
-<td><p>Add a large button to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addToggleButton" title="ribbon.panel.RibbonPanel.addToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addToggleButton</span></code></a>([text, icon, ...])</p></td>
-<td><p>Add a toggle button to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSmallToggleButton" title="ribbon.panel.RibbonPanel.addSmallToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSmallToggleButton</span></code></a>([text, ...])</p></td>
-<td><p>Add a small toggle button to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addMediumToggleButton" title="ribbon.panel.RibbonPanel.addMediumToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addMediumToggleButton</span></code></a>([text, ...])</p></td>
-<td><p>Add a medium toggle button to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLargeToggleButton" title="ribbon.panel.RibbonPanel.addLargeToggleButton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLargeToggleButton</span></code></a>([text, ...])</p></td>
-<td><p>Add a large toggle button to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addComboBox" title="ribbon.panel.RibbonPanel.addComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addComboBox</span></code></a>(items[, rowSpan, ...])</p></td>
-<td><p>Add a combo box to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addFontComboBox" title="ribbon.panel.RibbonPanel.addFontComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addFontComboBox</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a font combo box to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLineEdit" title="ribbon.panel.RibbonPanel.addLineEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLineEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
-<td><p>Add a line edit to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTextEdit" title="ribbon.panel.RibbonPanel.addTextEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTextEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
-<td><p>Add a text edit to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addPlainTextEdit" title="ribbon.panel.RibbonPanel.addPlainTextEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addPlainTextEdit</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a plain text edit to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addLabel" title="ribbon.panel.RibbonPanel.addLabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addLabel</span></code></a>(text[, rowSpan, ...])</p></td>
-<td><p>Add a label to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addProgressBar" title="ribbon.panel.RibbonPanel.addProgressBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addProgressBar</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a progress bar to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSlider" title="ribbon.panel.RibbonPanel.addSlider"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSlider</span></code></a>([rowSpan, colSpan, ...])</p></td>
-<td><p>Add a slider to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSpinBox" title="ribbon.panel.RibbonPanel.addSpinBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSpinBox</span></code></a>([rowSpan, colSpan, ...])</p></td>
-<td><p>Add a spin box to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addDoubleSpinBox" title="ribbon.panel.RibbonPanel.addDoubleSpinBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addDoubleSpinBox</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a double spin box to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addDateEdit" title="ribbon.panel.RibbonPanel.addDateEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addDateEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
-<td><p>Add a date edit to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTimeEdit" title="ribbon.panel.RibbonPanel.addTimeEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTimeEdit</span></code></a>([rowSpan, colSpan, ...])</p></td>
-<td><p>Add a time edit to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addDateTimeEdit" title="ribbon.panel.RibbonPanel.addDateTimeEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addDateTimeEdit</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a date time edit to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTableWidget" title="ribbon.panel.RibbonPanel.addTableWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTableWidget</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a table widget to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addTreeWidget" title="ribbon.panel.RibbonPanel.addTreeWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addTreeWidget</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a tree widget to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addListWidget" title="ribbon.panel.RibbonPanel.addListWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addListWidget</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a list widget to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addCalendarWidget" title="ribbon.panel.RibbonPanel.addCalendarWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addCalendarWidget</span></code></a>([rowSpan, ...])</p></td>
-<td><p>Add a calendar widget to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addSeparator" title="ribbon.panel.RibbonPanel.addSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addSeparator</span></code></a>([orientation, ...])</p></td>
-<td><p>Add a separator to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addHorizontalSeparator" title="ribbon.panel.RibbonPanel.addHorizontalSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addHorizontalSeparator</span></code></a>([width, ...])</p></td>
-<td><p>Add a horizontal separator to the panel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addVerticalSeparator" title="ribbon.panel.RibbonPanel.addVerticalSeparator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addVerticalSeparator</span></code></a>([width, ...])</p></td>
-<td><p>Add a vertical separator to the panel.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="references.html#ribbon.panel.RibbonPanel.addGallery" title="ribbon.panel.RibbonPanel.addGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonPanel.addGallery</span></code></a>([minimumWidth, ...])</p></td>
-<td><p>Add a gallery to the panel.</p></td>
-</tr>
 </tbody>
 </table>
 </section>
-<section id="id5">
-<h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<section id="id3">
+<h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
 <p>For example, using the following code,</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
@@ -705,8 +400,8 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <span class="kn">from</span> <span class="nn">qtpy.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
 <span class="kn">from</span> <span class="nn">qtpy.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
 
-<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
-<span class="kn">from</span> <span class="nn">ribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon.screenshotwindow</span> <span class="kn">import</span> <span class="n">RibbonScreenShotWindow</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
@@ -773,8 +468,8 @@ you can use the <cite>setMenuBar</cite> method of <a class="reference external" 
 <span class="kn">from</span> <span class="nn">PyQt5.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span><span class="p">,</span> <span class="n">QFont</span>
 <span class="kn">from</span> <span class="nn">PyQt5.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
 
-<span class="kn">from</span> <span class="nn">ribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
-<span class="kn">from</span> <span class="nn">ribbon.utils</span> <span class="kn">import</span> <span class="n">data_file_path</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon</span> <span class="kn">import</span> <span class="n">RibbonBar</span>
+<span class="kn">from</span> <span class="nn">pyqtribbon.utils</span> <span class="kn">import</span> <span class="n">data_file_path</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
